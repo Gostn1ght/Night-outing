@@ -27,6 +27,10 @@ class UIPdaChat : public CUIWindow, public CUIWndCallback
 
 	CUI3tButton* send_money_button;
 	CUI3tButton* send_msg_to_user;
+	CUI3tButton* squad_invite_btn;
+	CUI3tButton* squad_kick_btn;
+	CUI3tButton* squad_leader_btn;
+	CUI3tButton* squad_leave_btn;
 	CUIScrollView* chat_users;
 	CUIScrollView* chat_text;
 
@@ -61,6 +65,12 @@ class UIPdaChat : public CUIWindow, public CUIWndCallback
 	void xr_stdcall     button_click_send_msg(CUIWindow* w, void* d);
 	void				Send_msg();
 	void xr_stdcall     button_click_send_money(CUIWindow* w, void* d);
+	// MP squad management buttons (see game_sv_freemp::OnEvent squad dispatch)
+	void xr_stdcall     button_click_squad_invite(CUIWindow* w, void* d);
+	void xr_stdcall     button_click_squad_kick(CUIWindow* w, void* d);
+	void xr_stdcall     button_click_squad_leader(CUIWindow* w, void* d);
+	void xr_stdcall     button_click_squad_leave(CUIWindow* w, void* d);
+	void				SendSquadEvent(u16 game_event, u16 first_id, u16 second_id);
 	void xr_stdcall	    button_click_mode_switch(CUIWindow* w, void* d);
 	void xr_stdcall button_click_anonimous_mode_switch(CUIWindow* w, void* d);
 	void xr_stdcall button_update_click(CUIWindow* w, void* d);

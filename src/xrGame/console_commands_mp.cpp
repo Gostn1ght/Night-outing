@@ -3308,6 +3308,190 @@ public:
 
 };
 
+// ---------------------------------------------------------------------------
+// MP squad / PDA-contact client commands.
+// These let a player create/manage an MP squad and PDA contact list from the
+// client. Each sends a GE_GAME_EVENT to the server, which routes it in
+// game_sv_freemp::OnEvent to the matching squad / contact handler.
+//   Squads   use entity GameIDs  (server: get_entity_from_eid).
+//   Contacts use ClientIDs       (server: RecivePdaContactMSG -> ClientID(id)).
+// ---------------------------------------------------------------------------
+static game_PlayerState* mp_find_player_by_name(LPCSTR name, ClientID& out_cid)
+{
+	static _locale_t loc = _create_locale(LC_ALL, "");
+	string128 want;
+	xr_strcpy(want, name);
+	_strlwr_l(_Trim(want), loc);
+
+	for (auto& it : Game().players)
+	{
+		if (!it.second) continue;
+		string128 pn;
+		xr_strcpy(pn, it.second->getName());
+		_strlwr_l(pn, loc);
+		if (xr_strcmp(pn, want) == 0)
+		{
+			out_cid = it.first;
+			return it.second;
+		}
+	}
+	return NULL;
+}
+
+// Shared preconditions for a client-issued MP command; returns the local actor.
+static CActor* mp_local_actor_ready()
+{
+	if (IsGameTypeSingle() || g_dedicated_server)					return NULL;
+	if (!(&Level()) || !(&Game()) || !Game().local_player)			return NULL;
+	if (Game().local_player->testFlag(GAME_PLAYER_FLAG_VERY_VERY_DEAD))	return NULL;
+	CActor* pActor = smart_cast<CActor*>(Level().CurrentControlEntity());
+	if (!pActor || !pActor->is_alive())								return NULL;
+	return pActor;
+}
+
+class CCC_SquadInvite : public IConsole_Command {
+public:
+	CCC_SquadInvite(LPCSTR N) : IConsole_Command(N) { bEmptyArgsHandled = false; }
+	virtual void Execute(LPCSTR args)
+	{
+		CActor* pActor = mp_local_actor_ready();
+		if (!pActor) return;
+		if (!args || !xr_strlen(args)) { Msg("! Format: mp_squad_invite <player name>"); return; }
+
+		ClientID cid;
+		game_PlayerState* ps = mp_find_player_by_name(args, cid);
+		if (!ps) { Msg("! SQUAD: player \"%s\" not found", args); return; }
+		if (ps->GameID == Game().local_player->GameID) { Msg("! SQUAD: can't invite yourself"); return; }
+
+		NET_Packet P;
+		Game().u_EventGen(P, GE_GAME_EVENT, pActor->ID());
+		P.w_u16(GAME_EVENT_SQUAD_INVITE_SERVER);
+		P.w_u16(ps->GameID);						// invitee
+		P.w_u16(Game().local_player->GameID);		// inviter (self)
+		Game().u_EventSend(P);
+		Msg("- SQUAD: invite sent to %s", ps->getName());
+	}
+	virtual void Info(TInfo& I) { xr_strcpy(I, "Invite/add an online player to your MP squad by name."); }
+};
+
+class CCC_SquadKick : public IConsole_Command {
+public:
+	CCC_SquadKick(LPCSTR N) : IConsole_Command(N) { bEmptyArgsHandled = false; }
+	virtual void Execute(LPCSTR args)
+	{
+		CActor* pActor = mp_local_actor_ready();
+		if (!pActor) return;
+		if (!args || !xr_strlen(args)) { Msg("! Format: mp_squad_kick <player name>"); return; }
+
+		ClientID cid;
+		game_PlayerState* ps = mp_find_player_by_name(args, cid);
+		if (!ps) { Msg("! SQUAD: player \"%s\" not found", args); return; }
+
+		NET_Packet P;
+		Game().u_EventGen(P, GE_GAME_EVENT, pActor->ID());
+		P.w_u16(GAME_EVENT_SQUAD_KICK_SERVER);
+		P.w_u16(Game().local_player->GameID);		// initiator (self)
+		P.w_u16(ps->GameID);						// player to kick
+		Game().u_EventSend(P);
+		Msg("- SQUAD: kick request sent for %s", ps->getName());
+	}
+	virtual void Info(TInfo& I) { xr_strcpy(I, "Kick a player from your MP squad by name (leader only)."); }
+};
+
+class CCC_SquadLeave : public IConsole_Command {
+public:
+	CCC_SquadLeave(LPCSTR N) : IConsole_Command(N) { bEmptyArgsHandled = true; }
+	virtual void Execute(LPCSTR /*args*/)
+	{
+		CActor* pActor = mp_local_actor_ready();
+		if (!pActor) return;
+
+		u16 self = Game().local_player->GameID;
+		NET_Packet P;
+		Game().u_EventGen(P, GE_GAME_EVENT, pActor->ID());
+		P.w_u16(GAME_EVENT_SQUAD_KICK_SERVER);
+		P.w_u16(self);								// initiator (self)
+		P.w_u16(self);								// target == self -> leave
+		Game().u_EventSend(P);
+		Msg("- SQUAD: you left your squad");
+	}
+	virtual void Info(TInfo& I) { xr_strcpy(I, "Leave your current MP squad."); }
+};
+
+class CCC_SquadLeader : public IConsole_Command {
+public:
+	CCC_SquadLeader(LPCSTR N) : IConsole_Command(N) { bEmptyArgsHandled = false; }
+	virtual void Execute(LPCSTR args)
+	{
+		CActor* pActor = mp_local_actor_ready();
+		if (!pActor) return;
+		if (!args || !xr_strlen(args)) { Msg("! Format: mp_squad_leader <player name>"); return; }
+
+		ClientID cid;
+		game_PlayerState* ps = mp_find_player_by_name(args, cid);
+		if (!ps) { Msg("! SQUAD: player \"%s\" not found", args); return; }
+
+		NET_Packet P;
+		Game().u_EventGen(P, GE_GAME_EVENT, pActor->ID());
+		P.w_u16(GAME_EVENT_SQUAD_LEADER_SERVER);
+		P.w_u16(Game().local_player->GameID);		// current leader (self)
+		P.w_u16(ps->GameID);						// new leader
+		Game().u_EventSend(P);
+		Msg("- SQUAD: leadership transfer requested to %s", ps->getName());
+	}
+	virtual void Info(TInfo& I) { xr_strcpy(I, "Transfer MP squad leadership to a player by name."); }
+};
+
+class CCC_ContactAdd : public IConsole_Command {
+public:
+	CCC_ContactAdd(LPCSTR N) : IConsole_Command(N) { bEmptyArgsHandled = false; }
+	virtual void Execute(LPCSTR args)
+	{
+		CActor* pActor = mp_local_actor_ready();
+		if (!pActor) return;
+		if (!args || !xr_strlen(args)) { Msg("! Format: pda_contact_add <player name>"); return; }
+
+		ClientID cid;
+		game_PlayerState* ps = mp_find_player_by_name(args, cid);
+		if (!ps) { Msg("! PDA: player \"%s\" not found", args); return; }
+
+		NET_Packet P;
+		Game().u_EventGen(P, GE_GAME_EVENT, pActor->ID());
+		P.w_u16(GAME_EVENT_UI_PDA_SERVER);
+		P.w_u8(2);									// type 2 = add
+		P.w_u32(Game().local_svdpnid.value());		// leader (self)
+		P.w_u32(cid.value());						// contact to add
+		Game().u_EventSend(P);
+		Msg("- PDA: added %s to contacts", ps->getName());
+	}
+	virtual void Info(TInfo& I) { xr_strcpy(I, "Add an online player to your PDA contacts by name."); }
+};
+
+class CCC_ContactRemove : public IConsole_Command {
+public:
+	CCC_ContactRemove(LPCSTR N) : IConsole_Command(N) { bEmptyArgsHandled = false; }
+	virtual void Execute(LPCSTR args)
+	{
+		CActor* pActor = mp_local_actor_ready();
+		if (!pActor) return;
+		if (!args || !xr_strlen(args)) { Msg("! Format: pda_contact_remove <player name>"); return; }
+
+		ClientID cid;
+		game_PlayerState* ps = mp_find_player_by_name(args, cid);
+		if (!ps) { Msg("! PDA: player \"%s\" not found", args); return; }
+
+		NET_Packet P;
+		Game().u_EventGen(P, GE_GAME_EVENT, pActor->ID());
+		P.w_u16(GAME_EVENT_UI_PDA_SERVER);
+		P.w_u8(3);									// type 3 = remove
+		P.w_u32(cid.value());						// contact to remove
+		P.w_u32(Game().local_svdpnid.value());		// leader (self)
+		Game().u_EventSend(P);
+		Msg("- PDA: removed %s from contacts", ps->getName());
+	}
+	virtual void Info(TInfo& I) { xr_strcpy(I, "Remove a player from your PDA contacts by name."); }
+};
+
 void register_mp_console_commands()
 {
 	//CMD4(CCC_Float, "rpg_speed", &speed_ROCKET, 0, 1000);
@@ -3367,6 +3551,15 @@ void register_mp_console_commands()
 
 	CMD1(CCC_GiveMoneyToPlayer, "sv_give_money");
 	CMD1(CCC_TransferMoney, "transfer_money");
+
+	// MP squad management (client -> server)
+	CMD1(CCC_SquadInvite,	"mp_squad_invite");
+	CMD1(CCC_SquadKick,		"mp_squad_kick");
+	CMD1(CCC_SquadLeave,	"mp_squad_leave");
+	CMD1(CCC_SquadLeader,	"mp_squad_leader");
+	// PDA contacts (client -> server)
+	CMD1(CCC_ContactAdd,	"pda_contact_add");
+	CMD1(CCC_ContactRemove,	"pda_contact_remove");
 
 	CMD1(CCC_Restart,				"g_restart"				);
 	CMD1(CCC_RestartFast,			"g_restart_fast"		);

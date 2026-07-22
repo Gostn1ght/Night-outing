@@ -853,29 +853,16 @@ public:
 
 };
  
-// SHEDULE UPDATE
 extern BOOL		g_cl_draw_mp_statistic;
 extern int		MAX_DISTANCE_FIND_GRAPH;
 
-// These admin-tunable scheduler/HUD scales are owned here (registered by the
-// admin console commands below). Defaults match a neutral 1.0 scale / effects on.
-float	Shedule_Scale_Objects		= 1.0f;
-float	Shedule_Scale_AI_Stalker	= 1.0f;
-float	Shedule_Scale_Items			= 1.0f;
-
 extern int		SyncAlifeCount;
-int		HudWeaponsEffects			= 1;
 
 void register_console_admin()
 {
 	///if (strstr(Core.Params, "-developer"))
 	{
-		CMD4(CCC_Integer, "adm_wpn_hud_effect", &HudWeaponsEffects, 0, 1);
 		CMD4(CCC_Integer, "adm_alife_objects_sync", &SyncAlifeCount, 10, 1000);
-
-		CMD4(CCC_Float, "adm_shedule_ai", &Shedule_Scale_AI_Stalker, 0.1, 4);
-		CMD4(CCC_Float, "adm_shedule_objects", &Shedule_Scale_Objects, 0.1, 4);
-		CMD4(CCC_Float, "adm_shedule_items", &Shedule_Scale_Items, 0.1, 4);
 
 		// DRAW STATISTIC
 		CMD4(CCC_Integer, "draw_mp_statistic", &g_cl_draw_mp_statistic, 0, 1);

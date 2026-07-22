@@ -295,6 +295,9 @@ enum EGameMessages {  //game_cl <----> game_sv messages
 	GAME_EVENT_UI_PDA,
 	GAME_EVENT_UI_PDA_SERVER,
 	GAME_EVENT_UI_PDA_CHAT_SERVER,
+	GAME_EVENT_SQUAD_INVITE_SERVER,			// client -> server: invite/join a player
+	GAME_EVENT_SQUAD_KICK_SERVER,			// client -> server: kick/leave a player
+	GAME_EVENT_SQUAD_LEADER_SERVER,			// client -> server: make a player leader
 
 	//-----------------------------------------
 	GAME_EVENT_SCRIPT_BEGINS_FROM,		// don't add messages after this

@@ -68,6 +68,11 @@ void UIPdaChat::Init()
 	send_money_button = UIHelper::Create3tButton(xml, "send_chat_money", m_background_chat);
 	send_msg_to_user = UIHelper::Create3tButton(xml, "send_chat_msg", m_background_chat);
 
+	squad_invite_btn = UIHelper::Create3tButton(xml, "squad_invite", m_background_chat);
+	squad_kick_btn   = UIHelper::Create3tButton(xml, "squad_kick", m_background_chat);
+	squad_leader_btn = UIHelper::Create3tButton(xml, "squad_leader", m_background_chat);
+	squad_leave_btn  = UIHelper::Create3tButton(xml, "squad_leave", m_background_chat);
+
 
 
 	chat_editbox = UIHelper::CreateEditBox(xml, "msg_editbox", m_background_chat);
@@ -104,6 +109,15 @@ void UIPdaChat::InitCallBacks()
 	AddCallback(send_money_button, BUTTON_CLICKED, CUIWndCallback::void_function(this, &UIPdaChat::button_click_send_money));
 	AddCallback(switch_mode_button, BUTTON_CLICKED, CUIWndCallback::void_function(this, &UIPdaChat::button_click_mode_switch));
 	AddCallback(switch_anonimous, BUTTON_CLICKED, CUIWndCallback::void_function(this, &UIPdaChat::button_click_anonimous_mode_switch));
+
+	Register(squad_invite_btn);
+	Register(squad_kick_btn);
+	Register(squad_leader_btn);
+	Register(squad_leave_btn);
+	AddCallback(squad_invite_btn, BUTTON_CLICKED, CUIWndCallback::void_function(this, &UIPdaChat::button_click_squad_invite));
+	AddCallback(squad_kick_btn, BUTTON_CLICKED, CUIWndCallback::void_function(this, &UIPdaChat::button_click_squad_kick));
+	AddCallback(squad_leader_btn, BUTTON_CLICKED, CUIWndCallback::void_function(this, &UIPdaChat::button_click_squad_leader));
+	AddCallback(squad_leave_btn, BUTTON_CLICKED, CUIWndCallback::void_function(this, &UIPdaChat::button_click_squad_leave));
 }
 
 void UIPdaChat::Show(bool status)
@@ -164,10 +178,10 @@ void UIPdaChat::Update()
 		string32 tmp;
 
 		string32 online = { 0 };
-		xr_strcat(online, "Онлайн: ");
+		xr_strcat(online, "пїЅпїЅпїЅпїЅпїЅпїЅ: ");
 		xr_strcat(online, itoa(Game().players.size(), tmp, 10));
 		CaptionOnline->SetText(online);
-		CaptionMode->SetText(ModeGlobalChat ? "Общий чат" : "Приватный чат");
+		CaptionMode->SetText(ModeGlobalChat ? "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ" : "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ");
 
 		bool f_Second = false;
 		bool f_Local = false;
@@ -213,7 +227,7 @@ void UIPdaChat::Update()
 			if (!change_focus)
 			{
 				change_focus = true;
-				cap_text_active->SetText("Ввод:");
+				cap_text_active->SetText("пїЅпїЅпїЅпїЅ:");
 				cap_text_active->SetColorAnimation("ui_slow_blinking_alpha", LA_ONLYALPHA | LA_TEXTCOLOR | LA_CYCLIC);
 			}
 		}
@@ -244,7 +258,7 @@ void UIPdaChat::Update()
 			if (Anonymous)
 			{
 				player_1_money->SetColorAnimation("ui_slow_blinking_alpha", LA_ONLYALPHA | LA_TEXTCOLOR | LA_CYCLIC);
-				xr_strcat(money1, " (Аноним)");
+				xr_strcat(money1, " (пїЅпїЅпїЅпїЅпїЅпїЅ)");
 			}
 			else
 				player_1_money->ResetColorAnimation();
@@ -410,7 +424,7 @@ void UIPdaChat::Send_msg()
 
 		if (Anonymous && ModeGlobalChat == 1)
 		{
-			data.news_caption = "Анонимно";
+			data.news_caption = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
 			data.news_text = text.c_str();
 			data.texture_name = "ui_inGame2_Istoriya_dolga";
 		}
@@ -446,7 +460,7 @@ void xr_stdcall UIPdaChat::button_click_send_money(CUIWindow* w, void* d)
 
 	if (money < 0 || money > 1000000)
 	{
-		Msg("Превышение максимального перевода 1млн");
+		Msg("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 1пїЅпїЅпїЅ");
 		return;
 	}
 
@@ -466,6 +480,63 @@ void xr_stdcall UIPdaChat::button_click_send_money(CUIWindow* w, void* d)
 	}
 
 
+}
+
+// Build and send a squad request to the server. The server routes these in
+// game_sv_freemp::OnEvent to join/kick/make_leader. Ids are entity GameIDs
+// (== CActor::ID() for a player). first_id/second_id order is per handler.
+void UIPdaChat::SendSquadEvent(u16 game_event, u16 first_id, u16 second_id)
+{
+	if (!LocalActor)
+		return;
+
+	NET_Packet P;
+	Game().u_EventGen(P, GE_GAME_EVENT, LocalActor->ID());
+	P.w_u16(game_event);
+	P.w_u16(first_id);
+	P.w_u16(second_id);
+	Game().u_EventSend(P);
+}
+
+void xr_stdcall UIPdaChat::button_click_squad_invite(CUIWindow* w, void* d)
+{
+	if (!LocalActor || !SecondActor)
+	{
+		Msg("! SQUAD: select a player in the list first");
+		return;
+	}
+	// join_player_in_squad(P, id): id = invitee, then reads inviter from packet
+	SendSquadEvent(GAME_EVENT_SQUAD_INVITE_SERVER, SecondActor->ID(), LocalActor->ID());
+}
+
+void xr_stdcall UIPdaChat::button_click_squad_kick(CUIWindow* w, void* d)
+{
+	if (!LocalActor || !SecondActor)
+	{
+		Msg("! SQUAD: select a player in the list first");
+		return;
+	}
+	// delete_player_from_squad(P, id): id = initiator, then reads target from packet
+	SendSquadEvent(GAME_EVENT_SQUAD_KICK_SERVER, LocalActor->ID(), SecondActor->ID());
+}
+
+void xr_stdcall UIPdaChat::button_click_squad_leader(CUIWindow* w, void* d)
+{
+	if (!LocalActor || !SecondActor)
+	{
+		Msg("! SQUAD: select a player in the list first");
+		return;
+	}
+	// make_player_squad_leader(P, id): id = old leader (self), then reads new leader
+	SendSquadEvent(GAME_EVENT_SQUAD_LEADER_SERVER, LocalActor->ID(), SecondActor->ID());
+}
+
+void xr_stdcall UIPdaChat::button_click_squad_leave(CUIWindow* w, void* d)
+{
+	if (!LocalActor)
+		return;
+	// leave == kick self: initiator == target == self
+	SendSquadEvent(GAME_EVENT_SQUAD_KICK_SERVER, LocalActor->ID(), LocalActor->ID());
 }
 
 void xr_stdcall UIPdaChat::button_update_click(CUIWindow* w, void* d)
@@ -513,7 +584,7 @@ void UIPdaChat::AddNewsData(GAME_NEWS_DATA data, ClientID CLid)
 	else
 		global_chat.push_back(data);
 
-	Msg("Игрок [%s] Отправил сообщение[%s] ", data.news_caption.c_str(), data.news_text.c_str());
+	Msg("пїЅпїЅпїЅпїЅпїЅ [%s] пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ[%s] ", data.news_caption.c_str(), data.news_text.c_str());
 }
 
 #include "UIGameCustom.h"
@@ -622,7 +693,7 @@ void UIPdaChat::RecivePacket(NET_Packet& P)
 		{
 			GAME_NEWS_DATA data_news;
 
-			data_news.news_caption = "Получено новое сообщение";
+			data_news.news_caption = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
 			data_news.news_text = news_text;
 			data_news.texture_name = texture_name;
 

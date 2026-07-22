@@ -70,6 +70,38 @@
 		</text_color>
 	</send_chat_money>
 
+	<squad_invite x="440" y="150" width="115" height="24">
+		<text font="letterica16" r="200" g="200" b="200" align="c">Invite to squad</text>
+		<texture>ui_inGame2_Mp_bigbuttone</texture>
+		<text_color>
+			<e r="200" g="200" b="200"/>
+		</text_color>
+	</squad_invite>
+
+	<squad_kick x="440" y="178" width="115" height="24">
+		<text font="letterica16" r="200" g="200" b="200" align="c">Kick from squad</text>
+		<texture>ui_inGame2_Mp_bigbuttone</texture>
+		<text_color>
+			<e r="200" g="200" b="200"/>
+		</text_color>
+	</squad_kick>
+
+	<squad_leader x="440" y="206" width="115" height="24">
+		<text font="letterica16" r="200" g="200" b="200" align="c">Make leader</text>
+		<texture>ui_inGame2_Mp_bigbuttone</texture>
+		<text_color>
+			<e r="200" g="200" b="200"/>
+		</text_color>
+	</squad_leader>
+
+	<squad_leave x="440" y="234" width="115" height="24">
+		<text font="letterica16" r="200" g="200" b="200" align="c">Leave squad</text>
+		<texture>ui_inGame2_Mp_bigbuttone</texture>
+		<text_color>
+			<e r="200" g="200" b="200"/>
+		</text_color>
+	</squad_leave>
+
 	<msg_editbox x="10" y="525" width="400" height="30" max_symb_count="21">
 		<text x="8" width="239" font="letterica16" complex_mode="0" vert_align="c" r="200" g="200" b="200"/>
 		<texture>ui_inGame2_edit_box_2</texture>

@@ -788,6 +788,21 @@ void game_sv_freemp::OnEvent(NET_Packet &P, u16 type, u32 time, ClientID sender)
 	{
 		RecivePdaChatMSG(P, sender);
 	}break;
+	case GAME_EVENT_SQUAD_INVITE_SERVER:
+	{
+		u16 invitee = P.r_u16();		// player being invited; join reads the inviter next
+		join_player_in_squad(P, invitee);
+	}break;
+	case GAME_EVENT_SQUAD_KICK_SERVER:
+	{
+		u16 initiator = P.r_u16();		// who requests the kick; kick reads the target next
+		delete_player_from_squad(P, initiator);
+	}break;
+	case GAME_EVENT_SQUAD_LEADER_SERVER:
+	{
+		u16 initiator = P.r_u16();		// current leader; make_leader reads the new leader next
+		make_player_squad_leader(P, initiator);
+	}break;
 	default:
 		inherited::OnEvent(P, type, time, sender);
 	};
