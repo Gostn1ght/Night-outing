@@ -5,7 +5,7 @@
 //	Description : UI Rank Faction info window class implementation
 ////////////////////////////////////////////////////////////////////////////
 
-#include "pch_script.h"
+#include "stdafx.h"
 #include "UIRankFaction.h"
 
 #include "UIXmlInit.h"

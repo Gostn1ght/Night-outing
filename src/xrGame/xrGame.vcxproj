@@ -1614,6 +1614,10 @@
     <ClInclude Include="UIGameCustom.h" />
     <ClInclude Include="UIGameDM.h" />
     <ClInclude Include="UIGameMP.h" />
+    <ClInclude Include="UIAdminSkin.h" />
+    <ClInclude Include="UIAdminSpawner.h" />
+    <ClInclude Include="console_commands_admin_features.h" />
+    <ClInclude Include="console_commands_gspawn.h" />
     <ClInclude Include="UIGameRP.h" />
     <ClInclude Include="UIGameSP.h" />
     <ClInclude Include="UIGameTDM.h" />
@@ -2784,6 +2788,11 @@
     <ClCompile Include="game_sv_freemp_dynamic_inv_box_respawn.cpp" />
     <ClCompile Include="game_sv_freemp_dynamic_music.cpp" />
     <ClCompile Include="game_sv_freemp_dynamic_weather.cpp" />
+    <ClCompile Include="game_sv_freemp_PDA.cpp" />
+    <ClCompile Include="game_sv_freemp_alife_cl_sync.cpp" />
+    <ClCompile Include="game_sv_freemp_squad.cpp" />
+    <ClCompile Include="console_commands_admin_features.cpp" />
+    <ClCompile Include="console_commands_gspawn.cpp" />
     <ClCompile Include="server_progress_saver_invboxes.cpp" />
     <ClCompile Include="server_progress_saver_players.cpp" />
     <ClCompile Include="server_progress_saver_thread.cpp" />
@@ -4232,6 +4241,8 @@
     <ClCompile Include="trade_parameters.cpp" />
     <ClCompile Include="traffic_optimization.cpp" />
     <ClCompile Include="trajectories.cpp" />
+    <ClCompile Include="UIAdminSkin.cpp" />
+    <ClCompile Include="UIAdminSpawner.cpp" />
     <ClCompile Include="UIAchivementsIndicator.cpp" />
     <ClCompile Include="UICursor.cpp" />
     <ClCompile Include="UIDialogHolder.cpp" />

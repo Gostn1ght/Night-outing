@@ -38,7 +38,7 @@ struct SND_Message{
 
 struct cl_TeamStruct
 {
-	shared_str			caSection;		// имя секции комманды
+	shared_str			caSection;		// пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	//-----------------------------------
 	ui_shader			IndicatorShader;
 	ui_shader			InvincibleShader;
@@ -106,6 +106,8 @@ class CUIVotingCategory;
 class CUIVote;
 class CUIMessageBoxEx;
 class CUIMpAdminMenu;
+class CUISkinSelector;
+class CUIAdminSpawner;
 
 namespace award_system
 {
@@ -143,6 +145,8 @@ protected:
 	bool							m_bVotingActive;
 	CUIVotingCategory*				m_pVoteStartWindow;
 	CUIMpAdminMenu*					m_pAdminMenuWindow;
+	CUISkinSelector*				m_pAdminSkinSelectorWindow;
+	CUIAdminSpawner*				m_pAdminSpawnerWindow;
 	CUIVote*						m_pVoteRespondWindow;
 	CUIMessageBoxEx*				m_pMessageBox;
 	BOOL							m_bSpectatorSelected;

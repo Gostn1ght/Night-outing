@@ -56,7 +56,6 @@ bool DirectPlayClient::CreateConnection(ClientConnectionOptions & opt)
 	if (CoCreateInstanceRes != S_OK)
 	{
 		DXTRACE_ERR("", CoCreateInstanceRes);
-		CHK_DX(CoCreateInstanceRes);
 	}
 
 	// Initialize IDirectPlay8Client object.

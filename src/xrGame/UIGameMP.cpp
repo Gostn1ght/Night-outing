@@ -6,6 +6,7 @@
 #include "UICursor.h"
 #include "Level.h"
 #include "game_cl_mp.h"
+#include "ui/UIMainIngameWnd.h"
 
 #include "attachable_item.h"
 
@@ -48,6 +49,19 @@ bool UIGameMP::IR_UIOnKeyboardPress(int dik)
 		ShowDemoPlayControl();
 		return true;
 	}
+
+	if (dik == DIK_F10) // Hotkey for Admin Spawner
+	{
+		if (m_game && m_game->local_player && m_game->local_player->testFlag(GAME_PLAYER_HAS_ADMIN_RIGHTS))
+		{
+			// UIMainIngameWnd is inherited from CUIGameCustom
+			this->UIMainIngameWnd->ToggleAdminSpawner(!this->UIMainIngameWnd->IsAdminSpawnerShown());
+			return true; // Event handled
+		}
+		// If not admin, or m_game/local_player not available, don't show.
+		return false; // Event not handled (or not allowed)
+	}
+
 #ifdef DEBUG
 	if (dik == DIK_T)
 	{

@@ -58,32 +58,60 @@ void game_sv_freemp::DynamicMusicUpdate()
 
 void game_sv_freemp::DynamicMusicFileCreate()
 {
-	string_path music_path;
-	FS.update_path(music_path, "$game_config$", "alife\\music.ltx");
-	Music = xr_new<CInifile>(music_path, true, true);
-	MusicCount = Music->r_u8("music", "sound_count");
+	FS.update_path(m_music_config_path, "$game_config$", "alife\\music.json");
+
+	std::ifstream file(m_music_config_path);
+	if (file.is_open())
+	{
+		std::stringstream buffer;
+		buffer << file.rdbuf();
+		file.close();
+
+		if (!m_music_config_json.parse(buffer.str()))
+		{
+			Msg("! ERROR: Failed to parse music.json");
+		}
+		if (m_music_config_json.has<jsonxx::Object>("music_config"))
+		{
+			jsonxx::Object& music_config = m_music_config_json.get<jsonxx::Object>("music_config");
+			MusicCount = (int)music_config.get<jsonxx::Number>("sound_count", 0);
+		}
+	}
+	else
+	{
+		Msg("! ERROR: Failed to open music.json at path: %s", m_music_config_path);
+	}
 }
 
 /// Dynamic Music
 void game_sv_freemp::MusicPlay(CSE_ALifeObjectPhysic* obj, int pass, int obj_num)
 {
-	LPCSTR musicfile = obj->m_ini_string.c_str();
-	CInifile ini(&IReader((void*)(musicfile), xr_strlen(musicfile)), FS.get_path("$game_config$")->m_Path);
+	LPCSTR music_section_name = obj->m_ini_string.c_str(); // e.g., "play_bar_snd"
 
-	CInifile* tmp = NULL;
 	shared_str music_name;
 	string128 line_name;
-	xr_sprintf(line_name, sizeof(line_name), "sound%d", pass);
-	if (ini.section_exist("play_bar_snd"))
+	xr_sprintf(line_name, sizeof(line_name), "sound%d", pass); // e.g., "sound1", "sound2"
+
+	jsonxx::Object* music_config_object = nullptr;
+
+	if (m_music_config_json.has<jsonxx::Object>(music_section_name))
 	{
-		tmp = Music;
+		music_config_object = &m_music_config_json.get<jsonxx::Object>(music_section_name);
+	}
+	else if (m_music_config_json.has<jsonxx::Object>("music_config"))
+	{
+		// Fallback to general music_config if obj->m_ini_string does not match a section
+		music_config_object = &m_music_config_json.get<jsonxx::Object>("music_config");
 	}
 
-	if (tmp != nullptr)
+
+	if (music_config_object != nullptr && music_config_object->has<jsonxx::Object>("music_files"))
 	{
-		if (tmp->section_exist("music"))
+		jsonxx::Object& music_files_obj = music_config_object->get<jsonxx::Object>("music_files");
+
+		if (music_files_obj.has<jsonxx::String>(line_name))
 		{
-			music_name = tmp->r_string("music", line_name);
+			music_name = music_files_obj.get<jsonxx::String>(line_name).c_str();
 
 			Fvector pos = obj->Position();
 			NET_Packet P;

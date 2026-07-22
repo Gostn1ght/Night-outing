@@ -1,0 +1,24 @@
+<window>
+	<ui_skin_selector x="210" y="120" width="620" height="540">
+		<background x="0" y="0" width="620" height="540" stretch="1">
+			<texture>ui_inGame2_Mp_screen_main_window</texture>
+		</background>
+		<skin_tex_frame x="35" y="40" width="270" height="250" stretch="1">
+			<texture>ui_inGame2_Mp_screen_skin_window</texture>
+		</skin_tex_frame>
+		<skin_tex_pic x="55" y="60" width="230" height="210" stretch="1">
+			<texture>ui_inGame2_Mp_screen_skin_window</texture>
+		</skin_tex_pic>
+		<skin_list x="340" y="40" width="245" height="360" item_height="18" always_show_scroll="1" can_select="1">
+			<font font="letterica16"/>
+		</skin_list>
+		<set_visual_button x="340" y="420" width="112" height="26" stretch="1">
+			<texture>ui_inGame2_inventory_button</texture>
+			<text font="letterica16" align="c">st_set_visual</text>
+		</set_visual_button>
+		<close_button x="468" y="420" width="112" height="26" stretch="1">
+			<texture>ui_inGame2_inventory_button</texture>
+			<text font="letterica16" align="c">mp_back</text>
+		</close_button>
+	</ui_skin_selector>
+</window>

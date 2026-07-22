@@ -122,6 +122,7 @@ public:
 	virtual BOOL					Net_Relevant			(){return FALSE;}; // !!!! WARNING!!!
 	//
 	virtual void		__stdcall	Spawn_Write				(NET_Packet &tNetPacket, BOOL bLocal);
+	virtual void		__stdcall	Spawn_WriteNoBeginPacket(NET_Packet &tNetPacket, BOOL bLocal);
 	virtual BOOL		__stdcall	Spawn_Read				(NET_Packet &tNetPacket);
 	virtual LPCSTR		__stdcall	name					() const;
 	virtual LPCSTR		__stdcall	name_replace			() const;

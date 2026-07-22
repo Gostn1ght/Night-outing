@@ -1,0 +1,1702 @@
+﻿
+  libspeexdsp.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\SDK\libraries\x64\libspeexdsp.lib
+  Router.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\binares\x64-Release\openal32.dll
+  default.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\binares\x64-Release\ode.lib
+  DiscordRPC.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\binares\x64-Release\DiscordRPC.lib
+  xrServer_Render.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\binares\x64-Release\xrServerRender.lib
+  oalib.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\SDK\libraries\x64\oalib.lib
+  xrGameSpy.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\binares\x64-Release\xrGameSpy.dll
+  xrD3D9-Null.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\binares\x64-Release\xrD3D9-Null.dll
+  xrCore.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\binares\x64-Release\xrCore.lib
+  imgui.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\binares\x64-Release\imgui.lib
+  xrAPI.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\binares\x64-Release\xrAPI.lib
+  xrNetServer.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\binares\x64-Release\xrNetServer.lib
+  xrScripts.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\binares\x64-Release\xrScripts.dll
+  libogg_static.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\SDK\libraries\x64\libogg_static.lib
+  crypto.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\binares\x64-Release\crypto.lib
+  libtheora_static.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\SDK\libraries\x64\libtheora_static.lib
+  libvorbis_static.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\SDK\libraries\x64\libvorbis_static.lib
+  xrParticles.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\binares\x64-Release\xrParticles.lib
+  xrCDB.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\binares\x64-Release\xrCDB.lib
+cl : командная строка  warning D9035: использование параметра "Zc:forScope-" нежелательно, он будет удален в следующих выпусках [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrCPU_Pipe\xrCPU_Pipe.vcxproj]
+  StdAfx.cpp
+  xrXMLParser.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\binares\x64-Release\xrXMLParser.lib
+  xrSound.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\binares\x64-Release\xrSound.lib
+  xrPhysics.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\binares\x64-Release\xrPhysics.lib
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(2189,5): warning MSB9008: указанный проект ..\3rd party\cximage\CxImage\cximage.vcxproj не существует. [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+  alife_human_brain.cpp
+  alife_monster_brain.cpp
+  alife_space.cpp
+  character_info.cpp
+cl : командная строка  warning D9035: использование параметра "Zc:forScope-" нежелательно, он будет удален в следующих выпусках [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrCPU_Pipe\xrCPU_Pipe.vcxproj]
+  gametype_chooser.cpp
+cl : командная строка  warning D9035: использование параметра "Zc:forScope-" нежелательно, он будет удален в следующих выпусках [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrCPU_Pipe\xrCPU_Pipe.vcxproj]
+cl : командная строка  warning D9035: использование параметра "Zc:forScope-" нежелательно, он будет удален в следующих выпусках [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrCPU_Pipe\xrCPU_Pipe.vcxproj]
+cl : командная строка  warning D9035: использование параметра "Zc:forScope-" нежелательно, он будет удален в следующих выпусках [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrCPU_Pipe\xrCPU_Pipe.vcxproj]
+cl : командная строка  warning D9035: использование параметра "Zc:forScope-" нежелательно, он будет удален в следующих выпусках [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrCPU_Pipe\xrCPU_Pipe.vcxproj]
+  PLC.cpp
+  ttapi.cpp
+  xrCPU_Pipe.cpp
+  xrSkin2W.cpp
+  xrSkin2W_SSE.cpp
+  xrSkin2W_thread.cpp
+  LevelGameDef.cpp
+  lua_studio.cpp
+  object_factory.cpp
+  object_factory_register.cpp
+  object_factory_script.cpp
+  object_item_script.cpp
+  PHNetState.cpp
+  script_callStack.cpp
+  script_debugger.cpp
+  script_debugger_threads.cpp
+  script_engine.cpp
+  script_engine_export.cpp
+  script_engine_script.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  xrCPU_Pipe.vcxproj -> C:\Users\Mahito\Desktop\Night outing\Night-outing\binares\x64-Release\xrCPU_Pipe.lib
+  script_fcolor_script.cpp
+  script_flags_script.cpp
+  script_fmatrix_script.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  script_fvector_script.cpp
+  script_ini_file.cpp
+  script_ini_file_script.cpp
+  script_lua_helper.cpp
+  script_net_packet_script.cpp
+  script_process.cpp
+  script_reader_script.cpp
+  script_rtoken_list_script.cpp
+  script_sound_type_script.cpp
+  script_storage.cpp
+  script_thread.cpp
+  script_token_list.cpp
+  script_token_list_script.cpp
+  smart_cast.cpp
+  smart_cast_stats.cpp
+  specific_character.cpp
+  xrServer_Factory.cpp
+  xrServer_Objects.cpp
+  xrServer_Objects_Abstract.cpp
+  xrServer_Objects_ALife.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  xrServer_Objects_ALife_Items.cpp
+  xrServer_Objects_ALife_Items_script.cpp
+  xrServer_Objects_ALife_Items_script2.cpp
+  xrServer_Objects_ALife_Items_script3.cpp
+  xrServer_Objects_ALife_Monsters.cpp
+  xrServer_Objects_ALife_Monsters_script.cpp
+  xrServer_Objects_ALife_Monsters_script2.cpp
+  xrserver_objects_alife_monsters_script3.cpp
+  xrServer_Objects_ALife_Monsters_script4.cpp
+  xrServer_Objects_ALife_script.cpp
+  xrServer_Objects_ALife_script2.cpp
+  xrServer_Objects_ALife_script3.cpp
+  xrServer_Objects_Alife_Smartcovers.cpp
+  xrServer_Objects_Alife_Smartcovers_script.cpp
+  xrServer_Objects_script.cpp
+  xrServer_Objects_script2.cpp
+  xrServer_Object_Base.cpp
+  account_manager.cpp
+  account_manager_console.cpp
+  account_manager_script.cpp
+  action_base_script.cpp
+  action_planner_action_script.cpp
+  action_planner_script.cpp
+  ActivatingCharCollisionDelay.cpp
+  Actor.cpp
+  ActorAnimation.cpp
+  ActorAnimation_Scripts.cpp
+  ActorCameras.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.cpp(963) :  TODO : "Dima to Dima : forward-back bone impulse direction has been determined incorrectly!"
+  ActorCondition.cpp
+  ActorDeathTimer.cpp
+  ActorEffector.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  ActorEffector_script.cpp
+  ActorHelmet.cpp
+  ActorInput.cpp
+  ActorMountedWeapon.cpp
+  ActorMpWound_Script.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  actor_communication.cpp
+  Actor_Events.cpp
+  Actor_Feel.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  actor_input_handler.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  actor_memory.cpp
+  Actor_Movement.cpp
+  actor_mp_client.cpp
+  actor_mp_client_export.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  actor_mp_client_import.cpp
+  actor_mp_server.cpp
+  actor_mp_server_export.cpp
+  actor_mp_server_import.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  actor_mp_state.cpp
+  Actor_Network.cpp
+  actor_script.cpp
+  Actor_Sleep.cpp
+  actor_statistic_mgr.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  Actor_Weapon.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor_Network.cpp(749) :  TODO : "Dima to MadMax : do not comment inventory owner net_Destroy!!!"
+  AdvancedDetector.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  agent_corpse_manager.cpp
+  agent_enemy_manager.cpp
+  agent_explosive_manager.cpp
+  agent_location_manager.cpp
+  agent_manager.cpp
+  agent_manager_actions.cpp
+  agent_manager_planner.cpp
+  agent_manager_properties.cpp
+  agent_member_manager.cpp
+  agent_memory_manager.cpp
+  aimers_base.cpp
+  aimers_weapon.cpp
+  ai_monsters_misc.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\aimers_weapon.cpp(74) :  TODO : "Dima to Dima: use function from weapon to get this information"
+  ai_crow.cpp
+  ai_monster_bones.cpp
+  ai_monster_motion_stats.cpp
+  ai_monster_squad.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  ai_monster_squad_attack.cpp
+  ai_monster_squad_manager.cpp
+  ai_monster_squad_rest.cpp
+  ai_monster_utils.cpp
+  anim_triple.cpp
+  anomaly_detector.cpp
+  anti_aim_ability.cpp
+  base_monster.cpp
+  base_monster_anim.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  base_monster_debug.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  base_monster_feel.cpp
+  base_monster_misc.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  base_monster_net.cpp
+  base_monster_path.cpp
+  base_monster_script.cpp
+  base_monster_startup.cpp
+  base_monster_think.cpp
+  bloodsucker.cpp
+  bloodsucker_alien.cpp
+  bloodsucker_script.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  bloodsucker_state_manager.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  bloodsucker_vampire_effector.cpp
+  boar.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  boar_script.cpp
+  boar_state_manager.cpp
+  burer.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  burer_fast_gravi.cpp
+  burer_script.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  burer_state_manager.cpp
+  cat.cpp
+  cat_script.cpp
+  cat_state_manager.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  chimera.cpp
+  chimera_script.cpp
+  chimera_state_manager.cpp
+  controlled_actor.cpp
+  controller.cpp
+  controller_animation.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  controller_direction.cpp
+  controller_psy_hit.cpp
+  controller_psy_hit_effector.cpp
+  controller_script.cpp
+  controller_state_manager.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  control_animation.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  control_animation_base.cpp
+  control_animation_base_accel.cpp
+  control_animation_base_load.cpp
+  control_animation_base_update.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  control_critical_wound.cpp
+  control_direction.cpp
+  control_direction_base.cpp
+  control_jump.cpp
+  control_manager.cpp
+  control_manager_custom.cpp
+  control_melee_jump.cpp
+  control_movement.cpp
+  control_movement_base.cpp
+  control_path_builder.cpp
+  control_path_builder_base.cpp
+  control_path_builder_base_path.cpp
+  control_path_builder_base_set.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  control_path_builder_base_update.cpp
+  control_rotation_jump.cpp
+  control_run_attack.cpp
+  control_sequencer.cpp
+  control_threaten.cpp
+  corpse_cover.cpp
+  dog.cpp
+  dog_script.cpp
+  dog_state_manager.cpp
+  energy_holder.cpp
+  flesh.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  flesh_script.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  flesh_state_manager.cpp
+  fracture.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  fracture_script.cpp
+  fracture_state_manager.cpp
+  invisibility.cpp
+  melee_checker.cpp
+  monster_aura.cpp
+  monster_corpse_manager.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  monster_corpse_memory.cpp
+  monster_cover_manager.cpp
+  monster_enemy_manager.cpp
+  monster_enemy_memory.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  monster_event_manager.cpp
+  monster_hit_memory.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  monster_home.cpp
+  monster_morale.cpp
+  monster_sound_memory.cpp
+  poltergeist.cpp
+  poltergeist_ability.cpp
+  poltergeist_flame_thrower.cpp
+  poltergeist_movement.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  poltergeist_script.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  poltergeist_state_manager.cpp
+  poltergeist_telekinesis.cpp
+  pseudodog.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  pseudodog_psi_effector.cpp
+  pseudodog_script.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  pseudodog_state_manager.cpp
+  psy_dog.cpp
+  psy_dog_aura.cpp
+  psy_dog_state_manager.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  pseudogigant_script.cpp
+  pseudogigant_state_manager.cpp
+  pseudo_gigant.cpp
+  pseudo_gigant_step_effector.cpp
+  psy_aura.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  ai_rat.cpp
+  ai_rat_animations.cpp
+  ai_rat_behaviour.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  ai_rat_feel.cpp
+  ai_rat_fire.cpp
+  ai_rat_templates.cpp
+  rat_state_activation.cpp
+  rat_state_initialize.cpp
+  rat_state_switch.cpp
+  snork.cpp
+  snork_jump.cpp
+  snork_script.cpp
+  snork_state_manager.cpp
+  telekinesis.cpp
+  telekinetic_object.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  tushkano.cpp
+  tushkano_script.cpp
+  tushkano_state_manager.cpp
+  zombie.cpp
+  zombie_script.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  zombie_state_manager.cpp
+  phantom.cpp
+  ai_stalker.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  ai_stalker_cover.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  ai_stalker_debug.cpp
+  ai_stalker_events.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  ai_stalker_feel.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Ai\Stalker\ai_stalker_events.cpp(75) :  TODO : "Dima to Oles : how can this happen?"
+  ai_stalker_fire.cpp
+  ai_stalker_misc.cpp
+  ai_stalker_net.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  ai_stalker_script.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Ai\Stalker\ai_stalker_fire.cpp(290) :  TODO : "Dima to Dima : forward-back bone impulse direction has been determined incorrectly!"
+  ai_stalker_script_entity.cpp
+  ai_trader.cpp
+  ai_trader_script.cpp
+  trader_animation.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\ai\stalker\ai_stalker_script_entity.cpp(42) :  TODO : "Dima to Dima : Return correct medikit"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\ai\stalker\ai_stalker_script_entity.cpp(48) :  TODO : "Dima to Dima : Return correct food"
+  weighted_random.cpp
+  ai_crow_script.cpp
+  ai_debug_variables.cpp
+  ai_obstacle.cpp
+  AI_PhraseDialogManager.cpp
+  ai_sounds.cpp
+  ai_space.cpp
+  ai_stalker_alife.cpp
+  alife_anomalous_zone.cpp
+  alife_combat_manager.cpp
+  alife_communication_manager.cpp
+  alife_creature_abstract.cpp
+  alife_dynamic_object.cpp
+  alife_graph_registry.cpp
+  alife_group_abstract.cpp
+  alife_group_registry.cpp
+  alife_human_abstract.cpp
+  alife_human_brain_script.cpp
+  alife_human_object_handler.cpp
+  alife_interaction_manager.cpp
+  alife_monster_abstract.cpp
+  alife_monster_base.cpp
+  alife_monster_brain_script.cpp
+  alife_monster_detail_path_manager.cpp
+  alife_monster_detail_path_manager_script.cpp
+  alife_monster_movement_manager.cpp
+  alife_monster_movement_manager_script.cpp
+  alife_monster_patrol_path_manager.cpp
+  alife_monster_patrol_path_manager_script.cpp
+  alife_object.cpp
+  alife_object_registry.cpp
+  alife_online_offline_group.cpp
+  alife_online_offline_group_brain.cpp
+  alife_registry_container.cpp
+  alife_schedule_registry.cpp
+  alife_simulator.cpp
+  alife_simulator_base.cpp
+  alife_simulator_base2.cpp
+  alife_simulator_header.cpp
+  alife_simulator_script.cpp
+  alife_smart_terrain_registry.cpp
+  alife_smart_terrain_task.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  alife_smart_terrain_task_script.cpp
+  alife_smart_zone.cpp
+  alife_spawn_registry.cpp
+  alife_spawn_registry_header.cpp
+  alife_spawn_registry_spawn.cpp
+  alife_storage_manager.cpp
+  alife_story_registry.cpp
+  alife_surge_manager.cpp
+  alife_switch_manager.cpp
+  alife_time_manager.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  alife_trader.cpp
+  alife_trader_abstract.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\alife_trader.cpp(23) :  TODO : "Dima to Dima : correct price for non-artefact objects"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\alife_trader.cpp(29) :  TODO : "Dima to Dima : optimize this cycle by keeping additional data structure with bought items"
+  ammunition_groups.cpp
+  animation_movement_controller.cpp
+  animation_script_callback.cpp
+  animation_utils.cpp
+  AnomalyDetector.cpp
+  antirad.cpp
+  Artefact.cpp
+  artefact_activation.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  artefact_script.cpp
+  atlas_submit_queue.cpp
+  attachable_item.cpp
+  attachment_owner.cpp
+  autosave_manager.cpp
+  awards_store.cpp
+  Backpack.cpp
+  base_client_classes_script.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\autosave_manager.cpp(53) :  TODO : "Plecha to Plecha : AUTOSAVE (do not forgive to enable it in release version:-))))!!!!"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  BastArtifact.cpp
+  Battery.cpp
+  best_scores_helper.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  best_scores_store.cpp
+  BlackDrops.cpp
+  BlackGraviArtifact.cpp
+  black_list.cpp
+  Bolt.cpp
+  BoneProtections.cpp
+  bone_groups.cpp
+  BottleItem.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  BreakableObject.cpp
+  CameraEffector.cpp
+  CameraFirstEye.cpp
+  cameralook.cpp
+  Car.cpp
+  CarCameras.cpp
+  CarDamageParticles.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  CarDoors.cpp
+  CarExhaust.cpp
+  CarInput.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  CarLights.cpp
+  CarScript.cpp
+  CarSound.cpp
+  CarWeapon.cpp
+  CarWheels.cpp
+  car_memory.cpp
+  cdkey_ban_list.cpp
+  CharacterPhysicsSupport.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  character_community.cpp
+  character_hit_animations.cpp
+  character_rank.cpp
+  character_reputation.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  character_shell_control.cpp
+  client_spawn_manager.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(115,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(120,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(168,52): warning C4995: malloc: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(206,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(297,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(309,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(339,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(357,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(407,22): warning C4995: strcmp: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(515,27): warning C4995: strlen: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(517,43): warning C4995: calloc: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(541,21): warning C4995: strlen: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(550,47): warning C4995: calloc: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(582,21): warning C4995: strlen: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(591,47): warning C4995: calloc: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2471,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2474,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2746,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2751,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2893,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2896,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(3094,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(3097,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(81,47): warning C4995: calloc: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(213,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(214,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(215,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1274,39): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1283,39): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1292,39): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1301,39): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1315,39): warning C4995: fabs: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1322,54): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1346,54): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1358,69): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\ostream(683,62): warning C4995: strlen: имя помечено как #pragma deprecated (компилируется исходный файл character_shell_control.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+  client_spawn_manager_script.cpp
+  ClimableObject.cpp
+  console_commands.cpp
+  console_commands_mp.cpp
+  console_registrator_script.cpp
+  cover_evaluators.cpp
+  cover_manager.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  cover_point_script.cpp
+  cta_game_artefact.cpp
+  cta_game_artefact_activation.cpp
+  DynamicHudGlass.cpp
+  embedded_editor_admin.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  embedded_editor_helper.cpp
+  embedded_editor_hud.cpp
+  embedded_editor_main.cpp
+  embedded_editor_weather.cpp
+  embedded_editor_npc.cpp
+  game_cl_roleplay.cpp
+  server_progress_saver_ondeath_items.cpp
+  game_sv_freemp_dynamic_inv_box_respawn.cpp
+  game_sv_freemp_dynamic_music.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp_dynamic_inv_box_respawn.cpp(28,49): error C2228: выражение слева от ".c_str" должно представлять класс, структуру или объединение [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp_dynamic_inv_box_respawn.cpp(28,49): message : тип: string_path [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp_dynamic_inv_box_respawn.cpp(179,31): error C2664: "CSE_Abstract *CALifeSimulatorBase::spawn_item(LPCSTR,const Fvector &,u32,GameGraph::_GRAPH_ID,u16,bool)": невозможно преобразовать аргумент 1 из "std::string" в "LPCSTR" [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp_dynamic_inv_box_respawn.cpp(179,43): message : Для выполнения данного преобразования нет доступного оператора преобразования, определенного пользователем, или вызов оператора невозможен [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\alife_simulator_base.h(112,23): message : см. объявление "CALifeSimulatorBase::spawn_item" (компилируется исходный файл game_sv_freemp_dynamic_inv_box_respawn.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp_dynamic_inv_box_respawn.cpp(179,31): message : при попытке сопоставить список аргументов "(std::string, Fvector, u32, GameGraph::_GRAPH_ID, u16)" [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+  game_sv_freemp_dynamic_weather.cpp
+  game_sv_freemp_PDA.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp_dynamic_music.cpp(63,41): error C2228: выражение слева от ".c_str" должно представлять класс, структуру или объединение [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp_dynamic_music.cpp(63,41): message : тип: string_path [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+  game_sv_freemp_alife_cl_sync.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp_PDA.cpp(29,17): error C2065: GAME_EVENT_PDA_CHAT: необъявленный идентификатор [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp_PDA.cpp(54,17): error C2065: GAME_EVENT_PDA_CHAT: необъявленный идентификатор [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp_PDA.cpp(114,18): error C2065: GAME_EVENT_PDA_CHAT: необъявленный идентификатор [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp_PDA.cpp(134,18): error C2065: GAME_EVENT_PDA_CHAT: необъявленный идентификатор [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp_PDA.cpp(189,16): error C2065: GAME_EVENT_UI_PDA: необъявленный идентификатор [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp_PDA.cpp(205,12): error C2065: GAME_EVENT_UI_PDA: необъявленный идентификатор [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp_PDA.cpp(220,12): error C2065: GAME_EVENT_UI_PDA: необъявленный идентификатор [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+  game_sv_freemp_squad.cpp
+  console_commands_admin_features.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp_alife_cl_sync.cpp(92,25): error C2039: "UPDATE_WriteScript": не является членом "CSE_ALifeDynamicObject". [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\alife_simulator_base.h(30,7): message : см. объявление "CSE_ALifeDynamicObject" [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+  console_commands_gspawn.cpp
+  server_progress_saver_invboxes.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  server_progress_saver_players.cpp
+  server_progress_saver_thread.cpp
+  game_sv_freemp_trade.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  game_sv_roleplay.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  game_sv_roleplay_drop_items.cpp
+  net_physics_state.cpp
+  server_progress_saver.cpp
+  WalkieTalkie.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  RepairKit.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  script_event.cpp
+  UIGameFMP.cpp
+  CustomDetector.cpp
+  CustomMonster.cpp
+  CustomMonster_VCPU.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\CustomMonster.cpp(530) :  TODO : "Dima to All : this is FAKE, network is not supported here!"
+  CustomOutfit.cpp
+  CustomRocket.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(115,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(120,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(168,52): warning C4995: malloc: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(206,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(297,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(309,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(339,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(357,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(407,22): warning C4995: strcmp: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(515,27): warning C4995: strlen: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(517,43): warning C4995: calloc: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(541,21): warning C4995: strlen: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(550,47): warning C4995: calloc: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(582,21): warning C4995: strlen: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(591,47): warning C4995: calloc: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2471,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2474,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2746,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2751,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2893,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2896,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(3094,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(3097,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(81,47): warning C4995: calloc: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(213,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(214,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(215,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1274,39): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1283,39): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1292,39): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1301,39): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1315,39): warning C4995: fabs: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1322,54): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1346,54): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1358,69): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\ostream(683,62): warning C4995: strlen: имя помечено как #pragma deprecated (компилируется исходный файл CustomRocket.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+  CustomZone.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  DamagableItem.cpp
+  damage_manager.cpp
+  danger_cover_location.cpp
+  danger_explosive.cpp
+  danger_location.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  danger_manager.cpp
+  danger_object.cpp
+  danger_object_location.cpp
+  date_time.cpp
+  DBG_Car.cpp
+  dbg_draw_frustum.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  death_anims.cpp
+  death_anims_predicates.cpp
+  debug_renderer.cpp
+  debug_text_tree.cpp
+  DelayedActionFuse.cpp
+  DemoInfo.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  DemoInfo_Loader.cpp
+  DemoPLay_Control.cpp
+  DestroyablePhysicsObject.cpp
+  detail_path_manager.cpp
+  detail_path_manager_smooth.cpp
+  doors_actor.cpp
+  doors_door.cpp
+  doors_manager.cpp
+  double_shot_double_kill.cpp
+  DummyArtifact.cpp
+  dynamic_obstacles_avoider.cpp
+  eatable_item.cpp
+  eatable_item_object.cpp
+  EffectorBobbing.cpp
+  EffectorFall.cpp
+  EffectorShot.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  EffectorShotX.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  EffectorZoomInertion.cpp
+  ef_pattern.cpp
+  ef_primary.cpp
+  ef_storage.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  ef_storage_script.cpp
+  ElectricBall.cpp
+  EliteDetector.cpp
+  encyclopedia_article.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\ef_primary.cpp(215) :  TODO : "Dima to Dima : Implement relation function"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\ef_primary.cpp(221) :  TODO : "Dima to Dima : Implement greed function"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\ef_primary.cpp(227) :  TODO : "Dima to Dima : Implement aggressiveness function"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\ef_primary.cpp(233) :  TODO : "Dima to Dima : Implement enemy equipment cost function"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\ef_primary.cpp(259) :  TODO : "Dima to Dima : Implement enemy anomality function"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\ef_primary.cpp(335) :  TODO : "Dima to Dima : Append ItemDeterioration with non-ALife non-weapon branch"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\ef_primary.cpp(349) :  TODO : "Dima to Dima : Append EquipmentPreference with non-ALife branch"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\ef_primary.cpp(375) :  TODO : "Dima to Dima : Append MainWeaponPreference with non-ALife branch"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\ef_primary.cpp(428) :  TODO : "Dima to Dima : Append ItemValue with non-ALife branch"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\ef_primary.cpp(442) :  TODO : "Dima to Dima : Append WeaponAmmoCount with non-ALife branch"
+  enemy_manager.cpp
+  Entity.cpp
+  EntityCondition.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  entity_alive.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Entity.cpp(147) :  TODO : "Jim to Dima: no specific figures or comments needed"
+  event_conditions_collection.cpp
+  ExoOutfit.cpp
+  Explosive.cpp
+  ExplosiveItem.cpp
+  ExplosiveRocket.cpp
+  ExplosiveScript.cpp
+  F1.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  FadedBall.cpp
+  faster_than_bullets_time.cpp
+  fire_disp_controller.cpp
+  first_bullet_controller.cpp
+  flare.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  FoodItem.cpp
+  FryupZone.cpp
+  fs_registrator_script.cpp
+  GalantineArtifact.cpp
+  GameObject.cpp
+  GamePersistent.cpp
+  GameSpy_ATLAS.cpp
+  GameSpy_Available.cpp
+  GameSpy_Browser.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  GameSpy_Full.cpp
+  GameSpy_GCD_Client.cpp
+  GameSpy_GCD_Server.cpp
+  GameSpy_GP.cpp
+  GameSpy_HTTP.cpp
+  GameSpy_Patching.cpp
+  GameSpy_QR2.cpp
+  GameSpy_QR2_callbacks.cpp
+  GameSpy_SAKE.cpp
+  GameTask.cpp
+  GametaskManager.cpp
+  GameTask_script.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  game_base.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  game_cl_artefacthunt.cpp
+  game_cl_base.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  game_cl_base_weapon_usage_statistic.cpp
+  game_cl_base_weapon_usage_statistic_save.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  game_cl_capturetheartefact_buywnd.cpp
+  game_cl_capture_the_artefact.cpp
+  game_cl_capture_the_artefact_captions_manager.cpp
+  game_cl_capture_the_artefact_messages_menu.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  game_cl_deathmatch.cpp
+  game_cl_deathmatch_buywnd.cpp
+  game_cl_freemp.cpp
+  game_cl_mp.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  game_cl_mp_messages_menu.cpp
+  game_cl_mp_snd_messages.cpp
+  game_cl_single.cpp
+  game_cl_teamdeathmatch.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  game_graph_script.cpp
+  game_news.cpp
+  game_state_accumulator.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  game_state_accumulator_state_register.cpp
+  game_sv_artefacthunt.cpp
+  game_sv_artefacthunt_process_event.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  game_sv_base.cpp
+  game_sv_base_console_vars.cpp
+  game_sv_capture_the_artefact.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  game_sv_capture_the_artefact_buy_event.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  game_sv_capture_the_artefact_myteam_impl.cpp
+  game_sv_capture_the_artefact_process_event.cpp
+  game_sv_deathmatch.cpp
+  game_sv_deathmatch_process_event.cpp
+  game_sv_event_queue.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  game_sv_freemp.cpp
+  game_sv_item_respawner.cpp
+  game_sv_mp.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(638,22): error C2601: game_sv_freemp::set_account_nickname: недопустимые локальные определения функций [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(572): message : эта строка содержит скобку "{", которая пока не имеет парной [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(707,21): error C2601: game_sv_freemp::get_account_data: недопустимые локальные определения функций [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(572): message : эта строка содержит скобку "{", которая пока не имеет парной [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(770,22): error C2601: game_sv_freemp::ChangeTeamJson: недопустимые локальные определения функций [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(572): message : эта строка содержит скобку "{", которая пока не имеет парной [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(828,22): error C2601: game_sv_freemp::OnEvent: недопустимые локальные определения функций [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(572): message : эта строка содержит скобку "{", которая пока не имеет парной [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(863,22): error C2601: game_sv_freemp::Update: недопустимые локальные определения функций [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(572): message : эта строка содержит скобку "{", которая пока не имеет парной [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(884,22): error C2601: game_sv_freemp::OnTouch: недопустимые локальные определения функций [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(572): message : эта строка содержит скобку "{", которая пока не имеет парной [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(897,22): error C2601: game_sv_freemp::on_death: недопустимые локальные определения функций [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(572): message : эта строка содержит скобку "{", которая пока не имеет парной [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(907,33): error C2601: game_sv_freemp::GetStartGameTime: недопустимые локальные определения функций [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(572): message : эта строка содержит скобку "{", которая пока не имеет парной [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(915,33): error C2601: game_sv_freemp::GetGameTime: недопустимые локальные определения функций [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(572): message : эта строка содержит скобку "{", которая пока не имеет парной [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(923,33): error C2601: game_sv_freemp::GetEnvironmentGameTime: недопустимые локальные определения функций [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(572): message : эта строка содержит скобку "{", которая пока не имеет парной [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(931,23): error C2601: game_sv_freemp::GetEnvironmentGameTimeFactor: недопустимые локальные определения функций [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(572): message : эта строка содержит скобку "{", которая пока не имеет парной [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(936,22): error C2601: game_sv_freemp::SetEnvironmentGameTimeFactor: недопустимые локальные определения функций [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(572): message : эта строка содержит скобку "{", которая пока не имеет парной [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(942,22): error C2601: game_sv_freemp::change_level: недопустимые локальные определения функций [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(572): message : эта строка содержит скобку "{", которая пока не имеет парной [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(950,22): error C2601: game_sv_freemp::restart_simulator: недопустимые локальные определения функций [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(572): message : эта строка содержит скобку "{", которая пока не имеет парной [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(972,22): error C2601: game_sv_freemp::save_game: недопустимые локальные определения функций [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(572): message : эта строка содержит скобку "{", которая пока не имеет парной [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(980,22): error C2601: game_sv_freemp::load_game: недопустимые локальные определения функций [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(572): message : эта строка содержит скобку "{", которая пока не имеет парной [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\game_sv_freemp.cpp(572): fatal  error C1075: "{": не найдена несоответствующая лексема [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+  game_sv_single.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  game_sv_teamdeathmatch.cpp
+  game_sv_teamdeathmatch_process_event.cpp
+  GlobalFeelTouch.cpp
+  GraviArtifact.cpp
+  GraviZone.cpp
+  Grenade.cpp
+  GrenadeLauncher.cpp
+  group_hierarchy_holder.cpp
+  gsc_dsigned_ltx.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  HairsZone.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Grenade.cpp(341) :  TODO : "Dima to Yura : It crashes, because on net_Spawn object doesn't use AI locations, but on net_Destroy it does use them"
+  HairsZone_script.cpp
+  HangingLamp.cpp
+  harvest_time.cpp
+  Helicopter.cpp
+  Helicopter2.cpp
+  HelicopterMovementManager.cpp
+  HelicopterWeapon.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  helicopter_script.cpp
+  Hit.cpp
+  HitMarker.cpp
+  hits_store.cpp
+  hit_immunity.cpp
+  hit_memory_manager.cpp
+  holder_custom.cpp
+  holder_custom_script.cpp
+  HUDCrosshair.cpp
+  HudItem.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  HUDManager.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  HudSound.cpp
+  HUDTarget.cpp
+  hud_item_object.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  IKFoot.cpp
+  IKLimbsController.cpp
+  aint.cxx
+  Dof7control.cpp
+  eqn.cxx
+  eulersolver.cxx
+  IKLimb.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  jtlimits.cxx
+  limb.cxx
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  math3d.cpp
+  mathTrig.cpp
+  ik_anim_state.cpp
+  ik_calculate_data.cpp
+  ik_dbg_matrix.cpp
+  ik_foot_collider.cpp
+  ik_limb_state.cpp
+  ik_object_shift.cpp
+  imotion_position.cpp
+  imotion_velocity.cpp
+  InfoDocument.cpp
+  InfoPortion.cpp
+  interactive_animation.cpp
+  interactive_motion.cpp
+  Inventory.cpp
+  InventoryBox.cpp
+  InventoryOwner.cpp
+  inventory_item.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\inventory_item.cpp(1283) :  TODO : "TO ALL: serious performance problem"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\inventory_item.cpp(1435) :  TODO : "Dima to Andy : why CInventoryItem::CanTrade can be called for the item, which doesn't have owner?"
+  inventory_item_object.cpp
+  inventory_item_upgrade.cpp
+  inventory_owner_info.cpp
+  inventory_quickswitch.cpp
+  inventory_upgrade.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  inventory_upgrade_base.cpp
+  inventory_upgrade_group.cpp
+  inventory_upgrade_manager.cpp
+  inventory_upgrade_property.cpp
+  inventory_upgrade_root.cpp
+  invincible_fury.cpp
+  item_manager.cpp
+  key_binding_registrator_script.cpp
+  killer_victim_velocity_angle.cpp
+  kills_store.cpp
+  Level.cpp
+  Level_Bullet_Manager.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  Level_bullet_manager_firetrace.cpp
+  level_changer.cpp
+  level_debug.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  Level_GameSpy_Funcs.cpp
+  level_graph.cpp
+  level_graph_debug.cpp
+  level_graph_debug2.cpp
+  level_graph_vertex.cpp
+  Level_input.cpp
+  Level_load.cpp
+  level_map_locations.cpp
+  Level_network.cpp
+  Level_network_compressed_updates.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Level_network.cpp(354) :  TODO : "AlistairFox: отключил до момента, пока не будет включена проверка геймдаты!!, слишком долго!"
+  Level_network_Demo.cpp
+  Level_network_digest_computer.cpp
+  Level_network_map_sync.cpp
+  Level_network_messages.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  Level_network_spawn.cpp
+  Level_network_start_client.cpp
+  Level_secure_messaging.cpp
+  Level_SLS_Default.cpp
+  Level_SLS_Load.cpp
+  Level_SLS_Save.cpp
+  level_sounds.cpp
+  Level_start.cpp
+  location_manager.cpp
+  login_manager.cpp
+  login_manager_script.cpp
+  magic_box3.cpp
+  magic_minimize_1d.cpp
+  MainMenu.cpp
+  map_location.cpp
+  map_manager.cpp
+  map_spot.cpp
+  material_manager.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  medkit.cpp
+  memory_manager.cpp
+  memory_space_script.cpp
+  MercuryBall.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  Message_Filter.cpp
+  MilitaryOutfit.cpp
+  Mincer.cpp
+  mincer_script.cpp
+  min_obb.cpp
+  Missile.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  monster_community.cpp
+  MosquitoBald.cpp
+  MosquitoBald_script.cpp
+  movement_manager.cpp
+  movement_manager_game.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\movement_manager.cpp(167) :  TODO : "Optimize this in case of slowdown or not intended behaviour"
+  movement_manager_level.cpp
+  movement_manager_patrol.cpp
+  movement_manager_physic.cpp
+  moving_bones_snd_player.cpp
+  moving_object.cpp
+  moving_objects.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\movement_manager_physic.cpp(265) :  TODO : "Dima to ? : is this correct?"
+  moving_objects_dynamic.cpp
+  moving_objects_dynamic_collision.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\moving_objects.cpp(73) :  TODO : "this place can be optimized in case of slowdowns"
+  moving_objects_static.cpp
+  mpactor_dump_impl.cpp
+  MPPlayersBag.cpp
+  Needles.cpp
+  NoGravityZone.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  object_actions.cpp
+  object_handler.cpp
+  object_handler_planner.cpp
+  object_handler_planner_missile.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\object_handler_planner.cpp(223) :  TODO : "Dima to Dima : safe, but not optimal!"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\object_handler_planner.cpp(234) :  TODO : "Dima to Dima : safe, but not optimal!"
+  object_handler_planner_weapon.cpp
+  object_property_evaluators.cpp
+  obstacles_query.cpp
+  ParticlesObject.cpp
+  ParticlesPlayer.cpp
+  particle_params.cpp
+  particle_params_script.cpp
+  patrol_path.cpp
+  patrol_path_manager.cpp
+  patrol_path_params.cpp
+  patrol_path_params_script.cpp
+  patrol_path_storage.cpp
+  patrol_point.cpp
+  PDA.cpp
+  PHCollisionDamageReceiver.cpp
+  PHCommander.cpp
+  PHDebug.cpp
+  PHDestroyable.cpp
+  PHDestroyableNotificate.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(115,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(120,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(168,52): warning C4995: malloc: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(206,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(297,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(309,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(339,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(357,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(407,22): warning C4995: strcmp: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(515,27): warning C4995: strlen: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(517,43): warning C4995: calloc: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(541,21): warning C4995: strlen: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(550,47): warning C4995: calloc: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(582,21): warning C4995: strlen: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(591,47): warning C4995: calloc: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2471,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2474,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2746,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2751,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2893,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2896,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(3094,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(3097,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(81,47): warning C4995: calloc: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(213,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(214,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(215,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1274,39): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1283,39): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1292,39): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1301,39): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1315,39): warning C4995: fabs: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1322,54): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1346,54): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1358,69): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\ostream(683,62): warning C4995: strlen: имя помечено как #pragma deprecated (компилируется исходный файл PHCollisionDamageReceiver.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  PHMovementControl.cpp
+  PHMovementDynamicActivate.cpp
+  Phrase.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(115,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(120,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+  PhraseDialog.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(168,52): warning C4995: malloc: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(206,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(297,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(309,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(339,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocinfo(357,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(407,22): warning C4995: strcmp: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(515,27): warning C4995: strlen: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(517,43): warning C4995: calloc: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(541,21): warning C4995: strlen: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(550,47): warning C4995: calloc: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(582,21): warning C4995: strlen: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(591,47): warning C4995: calloc: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2471,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2474,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2746,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2751,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2893,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(2896,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(3094,19): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocale(3097,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(81,47): warning C4995: calloc: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(213,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(214,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(215,15): warning C4995: free: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1274,39): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1283,39): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1292,39): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1301,39): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1315,39): warning C4995: fabs: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1322,54): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1346,54): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xlocnum(1358,69): warning C4995: sprintf_s: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\ostream(683,62): warning C4995: strlen: имя помечено как #pragma deprecated (компилируется исходный файл PHMovementControl.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+  PhraseDialogManager.cpp
+  PhraseDialog_script.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  PhraseScript.cpp
+  PHScriptCall.cpp
+  PHShellCreator.cpp
+  PHSimpleCalls.cpp
+  PHSimpleCallsScript.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  PHSkeleton.cpp
+  PHSoundPlayer.cpp
+  PhysicObject.cpp
+  PhysicObject_script.cpp
+  PhysicsGamePars.cpp
+  PhysicsShellHolder.cpp
+  PhysicsSkeletonObject.cpp
+  physics_element_scripted.cpp
+  physics_game.cpp
+  physics_joint_scripted.cpp
+  physics_shell_animated.cpp
+  physics_shell_scripted.cpp
+  physics_world_scripted.cpp
+  physic_item.cpp
+  player_account.cpp
+  player_hud.cpp
+  player_hud_tune.cpp
+  player_name_modifyer.cpp
+  player_spot_params.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  player_state_achilles_heel.cpp
+  player_state_ambassador.cpp
+  player_state_ammo_elapsed.cpp
+  player_state_avenger.cpp
+  player_state_blitzkrieg.cpp
+  player_state_cherub.cpp
+  player_state_climber.cpp
+  player_state_mad.cpp
+  player_state_marksman.cpp
+  player_state_multichampion.cpp
+  player_state_opener.cpp
+  player_state_params.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  player_state_remembrance.cpp
+  player_state_skewer.cpp
+  player_state_toughy.cpp
+  player_team_win_score.cpp
+  poses_blending.cpp
+  pose_extrapolation.cpp
+  PostprocessAnimator.cpp
+  pp_effector_custom.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  pp_effector_distance.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  profile_data_types.cpp
+  profile_data_types_script.cpp
+  profile_store.cpp
+  profile_store_script.cpp
+  property_evaluator_script.cpp
+  property_storage_script.cpp
+  purchase_list.cpp
+  RadioactiveZone.cpp
+  random32.cpp
+  rat_states.cpp
+  rat_state_base.cpp
+  rat_state_manager.cpp
+  RegistryFuncs.cpp
+  relation_registry.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  relation_registry_actions.cpp
+  relation_registry_fights.cpp
+  restricted_object.cpp
+  restricted_object_obstacle.cpp
+  rewarding_events_handlers.cpp
+  rewarding_state_events.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  reward_event_generator.cpp
+  reward_manager.cpp
+  RGD5.cpp
+  RocketLauncher.cpp
+  RustyHairArtifact.cpp
+  saved_game_wrapper.cpp
+  saved_game_wrapper_script.cpp
+  ScientificOutfit.cpp
+  Scope.cpp
+  ScriptXMLInit.cpp
+  script_abstract_action.cpp
+  script_action_condition.cpp
+  script_action_condition_script.cpp
+  script_action_planner_action_wrapper.cpp
+  script_action_planner_wrapper.cpp
+  script_action_wrapper.cpp
+  script_animation_action.cpp
+  script_animation_action_script.cpp
+  script_binder.cpp
+  script_binder_object.cpp
+  script_binder_object_script.cpp
+  script_binder_object_wrapper.cpp
+  script_effector.cpp
+  script_effector_script.cpp
+  script_effector_wrapper.cpp
+  script_entity.cpp
+  script_entity_action.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  script_entity_action_script.cpp
+  script_game_object.cpp
+  script_game_object2.cpp
+  script_game_object3.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\script_game_object2.cpp(167) :  TODO : "Dima to Dima : find out why user defined conversion operators work incorrect"
+  script_game_object4.cpp
+  script_game_object_inventory_owner.cpp
+  script_game_object_script.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  script_game_object_script2.cpp
+  script_game_object_script3.cpp
+  script_game_object_script_trader.cpp
+  script_game_object_smart_covers.cpp
+  script_game_object_trader.cpp
+  script_game_object_use.cpp
+  script_game_object_use2.cpp
+  script_hit.cpp
+  script_hit_script.cpp
+  script_lanim.cpp
+  script_monster_action.cpp
+  script_monster_action_script.cpp
+  script_monster_hit_info_script.cpp
+  script_movement_action.cpp
+  script_movement_action_script.cpp
+  script_object.cpp
+  script_object_action.cpp
+  script_object_action_script.cpp
+  script_particles.cpp
+  script_particles_script.cpp
+  script_particle_action.cpp
+  script_particle_action_script.cpp
+  script_property_evaluator_wrapper.cpp
+  script_render_device_script.cpp
+  script_sound.cpp
+  script_sound_action.cpp
+  script_sound_action_script.cpp
+  script_sound_info_script.cpp
+  script_sound_script.cpp
+  script_watch_action.cpp
+  script_watch_action_script.cpp
+  script_world_property_script.cpp
+  script_world_state_script.cpp
+  script_zone.cpp
+  script_zone_script.cpp
+  searchlight.cpp
+  secure_messaging.cpp
+  seniority_hierarchy_holder.cpp
+  server_entity_wrapper.cpp
+  ShootingObject.cpp
+  shootingObject_dump_impl.cpp
+  sight_action.cpp
+  sight_manager.cpp
+  sight_manager_target.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  Silencer.cpp
+  silent_shots.cpp
+  SimpleDetector.cpp
+  smart_cover.cpp
+  smart_cover_action.cpp
+  smart_cover_animation_planner.cpp
+  smart_cover_animation_selector.cpp
+  smart_cover_default_behaviour_planner.cpp
+  smart_cover_description.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  smart_cover_detail.cpp
+  smart_cover_evaluators.cpp
+  smart_cover_loophole.cpp
+  smart_cover_loophole_planner_actions.cpp
+  smart_cover_object.cpp
+  smart_cover_object_script.cpp
+  smart_cover_planner_actions.cpp
+  smart_cover_planner_target_provider.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\smart_cover_loophole_planner_actions.cpp(98) :  TODO : "insert here loophole selection"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\smart_cover_loophole_planner_actions.cpp(142) :  TODO : "insert here loophole selection"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\smart_cover_loophole_planner_actions.cpp(174) :  TODO : "insert here loophole selection"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  smart_cover_planner_target_selector.cpp
+  smart_cover_storage.cpp
+  smart_cover_transition.cpp
+  smart_cover_transition_animation.cpp
+  sound_collection_storage.cpp
+  sound_memory_manager.cpp
+  sound_player.cpp
+  space_restriction.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\space_restriction_bridge_inline.h(26) :  TODO : "Dima to Dima : _Warning : this place can be optimized in case of a slowdown"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\space_restriction_bridge_inline.h(26) :  TODO : "Dima to Dima : _Warning : this place can be optimized in case of a slowdown"
+  space_restriction_base.cpp
+  space_restriction_bridge.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\space_restriction_bridge_inline.h(26) :  TODO : "Dima to Dima : _Warning : this place can be optimized in case of a slowdown"
+  space_restriction_composition.cpp
+  space_restriction_holder.cpp
+  space_restriction_manager.cpp
+  space_restriction_shape.cpp
+  space_restrictor.cpp
+  space_restrictor_script.cpp
+  Spectator.cpp
+  spectator_camera_first_eye.cpp
+  sprinter_stopper.cpp
+  squad_hierarchy_holder.cpp
+  StalkerOutfit.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  stalker_alife_actions.cpp
+  stalker_alife_planner.cpp
+  stalker_alife_task_actions.cpp
+  stalker_animation_callbacks.cpp
+  stalker_animation_data.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  stalker_animation_data_storage.cpp
+  stalker_animation_global.cpp
+  stalker_animation_head.cpp
+  stalker_animation_legs.cpp
+  stalker_animation_manager.cpp
+  stalker_animation_manager_debug.cpp
+  stalker_animation_manager_update.cpp
+  stalker_animation_names.cpp
+  stalker_animation_pair.cpp
+  stalker_animation_script.cpp
+  stalker_animation_state.cpp
+  stalker_animation_torso.cpp
+  stalker_anomaly_actions.cpp
+  stalker_anomaly_planner.cpp
+  stalker_base_action.cpp
+  stalker_combat_actions.cpp
+  stalker_combat_action_base.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  stalker_combat_planner.cpp
+  stalker_danger_by_sound_actions.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  stalker_danger_by_sound_planner.cpp
+  stalker_danger_grenade_actions.cpp
+  stalker_danger_grenade_planner.cpp
+  stalker_danger_in_direction_actions.cpp
+  stalker_danger_in_direction_planner.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  stalker_danger_planner.cpp
+  stalker_danger_property_evaluators.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  stalker_danger_unknown_actions.cpp
+  stalker_danger_unknown_planner.cpp
+  stalker_death_actions.cpp
+  stalker_death_planner.cpp
+  stalker_flair.cpp
+  stalker_get_distance_actions.cpp
+  stalker_get_distance_planner.cpp
+  stalker_kill_wounded_actions.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  stalker_kill_wounded_planner.cpp
+  stalker_low_cover_actions.cpp
+  stalker_low_cover_planner.cpp
+  stalker_movement_manager_base.cpp
+  stalker_movement_manager_obstacles.cpp
+  stalker_movement_manager_obstacles_path.cpp
+  stalker_movement_manager_smart_cover.cpp
+  stalker_movement_manager_smart_cover_fov_range.cpp
+  stalker_movement_manager_smart_cover_loopholes.cpp
+  stalker_movement_params.cpp
+  stalker_planner.cpp
+  stalker_property_evaluators.cpp
+  stalker_search_actions.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  stalker_search_planner.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  stalker_sound_data.cpp
+  stalker_sound_data_visitor.cpp
+  stalker_velocity_collection.cpp
+  stalker_velocity_holder.cpp
+  state_arguments_functions.cpp
+  static_obstacles_avoider.cpp
+  stats_submitter.cpp
+  stats_submitter_dsa_params.cpp
+  steering_behaviour.cpp
+  step_manager.cpp
+  string_table.cpp
+  team_base_zone.cpp
+  team_hierarchy_holder.cpp
+  TeleWhirlwind.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  ThornArtifact.cpp
+  Torch.cpp
+  torch_script.cpp
+  TorridZone.cpp
+  Tracer.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  trade.cpp
+  trade2.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  trade_parameters.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  traffic_optimization.cpp
+  trajectories.cpp
+  UIAdminSkin.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIAdminSpawner.cpp
+  UIAchivementsIndicator.cpp
+  UICursor.cpp
+  UIDialogHolder.cpp
+  UIGameAHunt.cpp
+  UIGameCTA.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\UIAdminSpawner.cpp(498,5): error C2660: CUISimpleWindow::GetWndSize: функция не принимает 1 аргументов [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\ui\uiabstract.h(48,22): message : см. объявление "CUISimpleWindow::GetWndSize" (компилируется исходный файл UIAdminSpawner.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\UIAdminSpawner.cpp(498,5): message : при попытке сопоставить список аргументов "(Fvector2)" [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\UIAdminSpawner.cpp(505,4): error C2660: CUISimpleWindow::GetWndPos: функция не принимает 1 аргументов [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\ui\uiabstract.h(46,22): message : см. объявление "CUISimpleWindow::GetWndPos" (компилируется исходный файл UIAdminSpawner.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\UIAdminSpawner.cpp(505,4): message : при попытке сопоставить список аргументов "(Fvector2)" [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\UIAdminSpawner.cpp(521,17): error C2660: CUIWindow::OnMouseMove: функция не принимает 2 аргументов [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\ui\uiwindow.h(101,18): message : см. объявление "CUIWindow::OnMouseMove" (компилируется исходный файл UIAdminSpawner.cpp) [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\UIAdminSpawner.cpp(521,17): message : при попытке сопоставить список аргументов "(float, float)" [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+  UIGameCustom.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIGameCustom_script.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIGameDM.cpp
+  UIGameMP.cpp
+  UIGameRP.cpp
+  UIGameSP.cpp
+  UIGameTDM.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIPanelsClassFactory.cpp
+  UIPdaChat.cpp
+  UIPlayerItem.cpp
+  UIWalkieTalkie.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIStaticItem.cpp
+  UITeamHeader.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UITeamPanels.cpp
+  UITeamState.cpp
+  UIZoneMap.cpp
+  ArtefactDetectorUI.cpp
+  FactionState.cpp
+  map_hint.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  MMSound.cpp
+  Restrictions.cpp
+  ServerList.cpp
+  ServerList_GameSpy_func.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  TeamInfo.cpp
+  UI3tButton.cpp
+  UIAchievements.cpp
+  UIActorMenu.cpp
+  UIActorMenuDeadBodySearch.cpp
+  UIActorMenuInitialize.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIActorMenuInventory.cpp
+  UIActorMenuTrade.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIActorMenuUpgrade.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIActorMenu_action.cpp
+  UIActorMenu_script.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIActorStateInfo.cpp
+  UIAnimatedStatic.cpp
+  UIBoosterInfo.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIBtnHint.cpp
+  UIButton.cpp
+  UIButton_script.cpp
+  UIBuyWeaponTab.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIBuyWndShared.cpp
+  UICarPanel.cpp
+  UICDkey.cpp
+  UICellCustomItems.cpp
+  UICellItem.cpp
+  UICellItemFactory.cpp
+  UIChangeMap.cpp
+  UIChangeWeather.cpp
+  UICharacterInfo.cpp
+  UIChatWnd.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UICheckButton.cpp
+  UIComboBox.cpp
+  UIComboBox_script.cpp
+  UICustomEdit.cpp
+  UICustomSpin.cpp
+  UIDemoPlayControl.cpp
+  UIDialogWnd.cpp
+  UIDoubleProgressBar.cpp
+  UIDragDropListEx.cpp
+  UIDragDropReferenceList.cpp
+  UIEditBox.cpp
+  UIEditBoxEx.cpp
+  UIEditBox_script.cpp
+  UIEditKeyBind.cpp
+  UIFactionWarWnd.cpp
+  UIFixedScrollBar.cpp
+  UIFrameLineWnd.cpp
+  UIFrameWindow.cpp
+  UIGameLog.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIGameTutorial.cpp
+  UIGameTutorialSimpleItem.cpp
+  UIGameTutorialVideoItem.cpp
+  UIHelper.cpp
+  UIHint.cpp
+  UIHudStatesWnd.cpp
+  UIInventoryItemParams.cpp
+  UIInventoryUpgradeWnd.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIInventoryUpgradeWnd_add.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIInventoryUtilities.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIInvUpgrade.cpp
+  UIInvUpgradeInfo.cpp
+  UIInvUpgradeProperty.cpp
+  UIItemInfo.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIKeyBinding.cpp
+  UIKickPlayer.cpp
+  UILanimController.cpp
+  UILine.cpp
+  UILines.cpp
+  UIListBox.cpp
+  UIListBoxItem.cpp
+  UIListBoxItemMsgChain.cpp
+  UIListBox_script.cpp
+  UIListItemServer.cpp
+  UILogsWnd.cpp
+  UIMainIngameWnd.cpp
+  UIMap.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIMapDesc.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\ui\UIMainIngameWnd.cpp(375,9): error C2653: inherited: не является именем класса или пространства имен [C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\xrGame.vcxproj]
+  UIMapInfo.cpp
+  UIMapInfo_script.cpp
+  UIMapLegend.cpp
+  UIMapList.cpp
+  UIMapWnd.cpp
+  UIMapWnd2.cpp
+  UIMapWndActions.cpp
+  UIMessageBox.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIMessageBoxEx.cpp
+  UIMessageBox_script.cpp
+  UIMessagesWindow.cpp
+  UIMMShniaga.cpp
+  UIMoneyIndicator.cpp
+  UIMotionIcon.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIMPAdminMenu.cpp
+  UIMPChangeMapAdm.cpp
+  UIMpItemsStoreWnd.cpp
+  UIMPPlayersAdm.cpp
+  UIMPServerAdm.cpp
+  UIMpTradeWnd.cpp
+  UIMpTradeWnd_init.cpp
+  UIMpTradeWnd_items.cpp
+  UIMpTradeWnd_misc.cpp
+  UIMpTradeWnd_trade.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIMpTradeWnd_wpn.cpp
+  UINewsItemWnd.cpp
+  UIOptConCom.cpp
+  UIOptionsItem.cpp
+  UIOptionsManager.cpp
+  UIOptionsManagerScript.cpp
+  UIOutfitInfo.cpp
+  UIPdaKillMessage.cpp
+  UIPdaMsgListItem.cpp
+  UIPdaWnd.cpp
+  UIProgressBar.cpp
+  UIProgressBar_script.cpp
+  UIProgressShape.cpp
+  UIPropertiesBox.cpp
+  UIPropertiesBox_script.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIRadioButton.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIRankIndicator.cpp
+  UIRankingWnd.cpp
+  UIScriptWnd.cpp
+  UIScrollBar.cpp
+  UIScrollBox.cpp
+  UIScrollView.cpp
+  UISecondTaskWnd.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIServerInfo.cpp
+  UISkinSelector.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UISpawnMenuRP.cpp
+  UISpawnWnd.cpp
+  UISpeechMenu.cpp
+  UISpinNum.cpp
+  UISpinText.cpp
+  UIStatic.cpp
+  UIStatic_script.cpp
+  UIStatix.cpp
+  UIStats.cpp
+  UIStatsIcon.cpp
+  UIStatsPlayerInfo.cpp
+  UIStatsPlayerList.cpp
+  UISubLine.cpp
+  UITabButton.cpp
+  UITabButtonMP.cpp
+  UITabControl.cpp
+  UITabControl_script.cpp
+  UITalkDialogWnd.cpp
+  UITalkWnd.cpp
+  UITaskWnd.cpp
+  UITextureMaster.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UITextVote.cpp
+  UITrackBar.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UITrackButton.cpp
+  UIVote.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  UIVoteStatusWnd.cpp
+  UIVotingCategory.cpp
+  UIWarState.cpp
+  UIWindow.cpp
+  UIWindow_script.cpp
+  UIWndCallback.cpp
+  UIWpnParams.cpp
+  UIXmlInit.cpp
+  ui_af_params.cpp
+  ui_arrow.cpp
+  UI_IB_Static.cpp
+  xrUIXmlParser.cpp
+  UI_AnimMode.cpp
+  ui_base.cpp
+  ui_export_script.cpp
+  UsableScriptObject.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  vision_client.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  visual_memory_manager.cpp
+  visual_memory_params.cpp
+  VoiceChat.cpp
+  VoiceSender.cpp
+  wallmark_manager.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\Actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  Weapon.cpp
+  WeaponAK74.cpp
+  WeaponAmmo.cpp
+  WeaponAutomaticShotgun.cpp
+  WeaponBinoculars.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  WeaponBinocularsVision.cpp
+  WeaponBinoculars_script.cpp
+  weaponBM16.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  weaponBM16_script.cpp
+  WeaponCustomPistol.cpp
+  WeaponDispersion.cpp
+  WeaponFire.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  WeaponFN2000.cpp
+  WeaponFORT.cpp
+  C:\Users\Mahito\Desktop\Night outing\Night-outing\src\xrGame\actor.h(145) :  TODO : "AlistairFox: Необходимо практически полностью переделать, сделать анимации eatable items на отдельном слоте"
+  WeaponGroza.cpp
+  WeaponHPSA.cpp
+  WeaponHPSA_script.cpp
+  WeaponKnife.cpp
+  WeaponKnife_script.cpp
+  WeaponLR300.cpp
+  WeaponMagazined.cpp

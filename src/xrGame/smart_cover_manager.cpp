@@ -6,7 +6,7 @@
 //	Description : smart cover manager class
 ////////////////////////////////////////////////////////////////////////////
 
-#include "pch_script.h"
+#include "stdafx.h"
 #include "smart_cover_manager.h"
 #include "memory_manager.h"
 #include "enemy_manager.h"

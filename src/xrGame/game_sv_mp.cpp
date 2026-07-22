@@ -340,6 +340,31 @@ void	game_sv_mp::OnEvent (NET_Packet &P, u16 type, u32 time, ClientID sender )
 			if (!l_pC) break;
 			OnPlayerBuySpawn	(l_pC->ID);
 		}break;
+	case GAME_EVENT_SPAWNER_SPAWN_ITEM:
+		{
+			xrClientData *CL = m_server->ID_to_client(sender);
+			if (!CL || !CL->owner || !CL->ps)
+				break;
+
+			shared_str sect;
+			P.r_stringZ(sect);
+			SpawnItem(sect.c_str(), CL->owner->ID);
+		}break;
+	case GAME_EVENT_CHANGE_VISUAL_FROM_SKIN_SELECTOR:
+		{
+			xrClientData *CL = m_server->ID_to_client(sender);
+			if (!CL || !CL->ps)
+				break;
+
+			CActor* pActor = smart_cast<CActor*>(Level().Objects.net_Find(CL->ps->GameID));
+			if (!pActor)
+				break;
+
+			string256 visual_name;
+			P.r_stringZ(visual_name);
+			pActor->u_EventGen(P, GE_CHANGE_VISUAL, pActor->ID());
+			pActor->u_EventSend(P);
+		}break;
 	case GAME_EVENT_VOTE_START:
 		{
 			if (!IsVotingEnabled()) break;
@@ -801,13 +826,13 @@ void	game_sv_mp::SetSkin					(CSE_Abstract* E, u16 Team, u16 ID)
 	//-------------------------------------------
 	string256 SkinName;
 	xr_strcpy(SkinName, pSettings->r_string("mp_skins_path", "skin_path"));
-	//загружены ли скины для этой комманды
+	//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
 	if (!TeamList.empty()	&&
 		TeamList.size() > Team	&&
 		!TeamList[Team].aSkins.empty())
 	{
-		//загружено ли достаточно скинов для этой комманды
+		//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		if (TeamList[Team].aSkins.size() > ID)
 		{
 			xr_strcat(SkinName, TeamList[Team].aSkins[ID].c_str());

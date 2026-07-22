@@ -58,6 +58,7 @@ struct game_PlayerState
 
 	u16			GameID;
 	u16			StaticID = 10;
+	u16			MPSquadID = 0;
 
 	u16			lasthitter;
 	u16			lasthitweapon;

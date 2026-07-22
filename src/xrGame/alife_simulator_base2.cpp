@@ -18,6 +18,9 @@
 #include "alife_smart_terrain_registry.h"
 #include "alife_group_registry.h"
 
+#include "game_sv_freemp.h"
+#include "xrServer.h"
+
 using namespace ALife;
 
 void CALifeSimulatorBase::register_object	(CSE_ALifeDynamicObject *object, bool add_object)
@@ -34,34 +37,35 @@ void CALifeSimulatorBase::register_object	(CSE_ALifeDynamicObject *object, bool 
 	groups().add						(object);
 
 	setup_simulator						(object);
-	
+
 	CSE_ALifeInventoryItem				*item = smart_cast<CSE_ALifeInventoryItem*>(object);
-	if (item && item->attached()) {
+	if (item && item->attached()) 
+	{
 		CSE_ALifeDynamicObject			*II = objects().object(item->base()->ID_Parent);
-
-#ifdef DEBUG
-		if (std::find(II->children.begin(),II->children.end(),item->base()->ID) != II->children.end()) {
-			Msg							("[LSS] Specified item [%s][%d] is already attached to the specified object [%s][%d]",item->base()->name_replace(),item->base()->ID,II->name_replace(),II->ID);
-			FATAL						("[LSS] Cannot recover from the previous error!");
-		}
-#endif
-
 		II->children.push_back			(item->base()->ID);
 		II->attach						(item,true,false);
 	}
 
 	if (can_register_objects())
 		object->on_register				();
+
+	game_sv_freemp* freemp = smart_cast<game_sv_freemp*>(server().game);
+	if (freemp)
+		freemp->RegisterUpdateAlife(object, true);
+		
 }
 
 void CALifeSimulatorBase::unregister_object	(CSE_ALifeDynamicObject *object, bool alife_query)
 {
+	if (!object) 
+		return;
+	
 	object->on_unregister				();
 
 	CSE_ALifeInventoryItem				*item = smart_cast<CSE_ALifeInventoryItem*>(object);
 	if (item && item->attached())
 		graph().detach					(*objects().object(item->base()->ID_Parent),item,objects().object(item->base()->ID_Parent)->m_tGraphID,alife_query);
-
+ 
 	objects().remove					(object->ID);
 	story_objects().remove				(object->m_story_id);
 	smart_terrains().remove				(object);
@@ -70,12 +74,16 @@ void CALifeSimulatorBase::unregister_object	(CSE_ALifeDynamicObject *object, boo
 	if (!object->m_bOnline) {
 		graph().remove					(object,object->m_tGraphID);
 		scheduled().remove				(object);
-	}
+ 	}
 	else
-		if (object->ID_Parent == 0xffff) {
-//			if (object->used_ai_locations())
-				graph().level().remove	(object,!object->used_ai_locations());
-		}
+	if (object->ID_Parent == 0xffff)
+	{
+  		graph().level().remove	(object,!object->used_ai_locations());
+	}
+
+	game_sv_freemp* freemp = smart_cast<game_sv_freemp*>(server().game);
+	if (freemp)
+		freemp->RegisterUpdateAlife(object, false);
 }
 
 void CALifeSimulatorBase::on_death			(CSE_Abstract *killed, CSE_Abstract *killer)

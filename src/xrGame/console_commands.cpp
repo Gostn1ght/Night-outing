@@ -1,4 +1,4 @@
-﻿#include "StdAfx.h"
+#include "StdAfx.h"
 #include "../xrEngine/xr_ioconsole.h"
 #include "../xrEngine/xr_ioc_cmd.h"
 #include "../xrEngine/customhud.h"
@@ -50,6 +50,8 @@
 #include "GameSpy/GameSpy_Patching.h"
 #include "game_sv_freemp.h"
 #include "game_base.h"
+#include "console_commands_admin_features.h"
+#include "console_commands_gspawn.h"
 
 #include "ai_debug_variables.h"
 #include "../xrphysics/console_vars.h"
@@ -1706,6 +1708,22 @@ public:
 	}
 };
 
+class CCC_ToggleAdminSpawner : public IConsole_Command {
+public:
+	CCC_ToggleAdminSpawner(LPCSTR N) : IConsole_Command(N) { bEmptyArgsHandled = true; };
+
+	virtual void Execute(LPCSTR args)
+	{
+		if (CurrentGameUI() && CurrentGameUI()->UIMainIngameWnd)
+		{
+			bool bShow = !CurrentGameUI()->UIMainIngameWnd->IsAdminSpawnerShown();
+			CurrentGameUI()->UIMainIngameWnd->ToggleAdminSpawner(bShow);
+		}
+	}
+
+	virtual void Save(IWriter* F) {};
+};
+
 class CCC_DumpObjects : public IConsole_Command {
 public:
 	CCC_DumpObjects(LPCSTR N) : IConsole_Command(N)  { bEmptyArgsHandled = true; };
@@ -2216,6 +2234,7 @@ CMD4(CCC_FloatBlock,		"dbg_text_height_scale",	&dbg_text_height_scale	,			0.2f	,
 
 	CMD3(CCC_Mask,		"ai_use_torch_dynamic_lights",	&g_uCommonFlags, flAiUseTorchDynamicLights);
 	CMD1(CCC_Crash, "Crash_game");
+	CMD1(CCC_ToggleAdminSpawner, "ui_adm_spawner");
 
 #ifndef MASTER_GOLD
 	CMD4(CCC_Vector3,		"psp_cam_offset",				&CCameraLook2::m_cam_offset, Fvector().set(-1000,-1000,-1000),Fvector().set(1000,1000,1000));
@@ -2302,4 +2321,6 @@ extern BOOL dbg_moving_bones_snd_player;
 
 	CMD4(CCC_Integer,	"keypress_on_start",	&g_keypress_on_start, 0, 1);
 	register_mp_console_commands				();
+	register_console_admin();
+	register_console_gspawn();
 }

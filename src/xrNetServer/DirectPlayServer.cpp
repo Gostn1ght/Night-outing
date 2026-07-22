@@ -167,7 +167,6 @@ bool DirectPlayServer::CreateConnection(GameDescriptionData & game_descr, Server
 	if (CoCreateInstanceRes != S_OK)
 	{
 		DXTRACE_ERR(TEXT("Instance could not be created"), CoCreateInstanceRes);
-		CHK_DX(CoCreateInstanceRes);
 	}
 
 	// Initialize IDirectPlay8Client object.

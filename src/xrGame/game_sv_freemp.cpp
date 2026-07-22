@@ -1,4 +1,4 @@
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "game_sv_freemp.h"
 #include "Level.h"
 #include "alife_simulator.h"
@@ -8,15 +8,25 @@
 #include "CustomOutfit.h"
 #include "Actor.h"
 #include <ui/UIInventoryUtilities.h>
+#include "../xrEngine/x_ray.h"
+#include "alife_object_registry.h"
+#include "alife_graph_registry.h"
+#include "ai_space.h"
+#include "level_graph.h"
+#include "restriction_space.h"
+#include "xrServer_Objects_ALife_Monsters.h"
+#include "xrServer_Objects_ALife_Items.h"
+#include "xrServer_Objects_ALife.h"
+#include "string_table.h"
+#include "alife_time_manager.h"
+#include <limits>
 
 game_sv_freemp::game_sv_freemp()
 	:pure_relcase(&game_sv_freemp::net_Relcase)
 {
 	m_type = eGameIDFreeMp;
 
-	FS.update_path(spawn_config, "$game_config$", "alife\\start_stuf.ltx");
-	spawn_file = xr_new<CInifile>(spawn_config, true, true);
-
+	FS.update_path(m_spawn_config_path, "$game_config$", "alife\\start_stuf.ltx");
 	DynamicBoxFileCreate();
 	DynamicMusicFileCreate();
 
@@ -25,14 +35,6 @@ game_sv_freemp::game_sv_freemp()
 
 game_sv_freemp::~game_sv_freemp()
 {
-	xr_delete(spawn_trash);
-	xr_delete(spawn_boosters);
-	xr_delete(spawn_weapons_devices);
-	xr_delete(spawn_ammo);
-	xr_delete(spawn_explosive);
-	xr_delete(spawn_weapons);
-	xr_delete(Music);
-	xr_delete(spawn_file);
 	xr_delete(Saver);
 }
 
@@ -237,6 +239,25 @@ void game_sv_freemp::AddMoneyToPlayer(game_PlayerState * ps, s32 amount)
 	signal_Syncronize();
 }
 
+void game_sv_freemp::SetMoneyToPlayer(game_PlayerState* ps, s32 amount)
+{
+	if (!ps) return;
+
+	Msg("--- Set money to player: [%u] [%s], %d money", ps->GameID, ps->getName(), amount);
+
+	if (amount < 0)
+		amount = 0;
+
+	if (amount > std::numeric_limits<s32>().max()) 
+	{
+		Msg("! The limit of the maximum amount of money has been exceeded.");
+		amount = std::numeric_limits<s32>().max() - 1;
+	}
+
+	ps->money_for_round = amount;
+	signal_Syncronize();
+}
+
 void game_sv_freemp::SpawnItemToActor(u16 actorId, LPCSTR name)
 {
 	if (!name) return;
@@ -259,6 +280,85 @@ void game_sv_freemp::SpawnItemToActor(u16 actorId, LPCSTR name)
 	}
 
 	spawn_end(E, m_server->GetServerClient()->ID);
+}
+
+void game_sv_freemp::SpawnItem(LPCSTR section, u16 parent_id)
+{
+	if (!section) return;
+
+	CSE_Abstract *E = spawn_begin(section);
+	E->ID_Parent = parent_id;
+	E->s_flags.assign(M_SPAWN_OBJECT_LOCAL);	// flags
+
+	CSE_ALifeItemWeapon		*pWeapon = smart_cast<CSE_ALifeItemWeapon*>(E);
+	if (pWeapon)
+	{
+		u16 ammo_magsize = pWeapon->get_ammo_magsize();
+		pWeapon->a_elapsed = ammo_magsize;
+	}
+
+	CSE_ALifeItemPDA *pPda = smart_cast<CSE_ALifeItemPDA*>(E);
+	if (pPda)
+	{
+		pPda->m_original_owner = parent_id;
+	}
+
+	spawn_end(E, m_server->GetServerClient()->ID);
+}
+
+bool game_sv_freemp::SpawnItemToPos(LPCSTR section, Fvector3 position)
+{
+	if (!section) return false;
+
+	CSE_Abstract *E = spawn_begin(section);
+	E->ID_Parent = 0xffff;
+	E->position().set(position);
+	E->s_flags.assign(M_SPAWN_OBJECT_LOCAL);	// flags
+
+	CSE_ALifeItemWeapon		*pWeapon = smart_cast<CSE_ALifeItemWeapon*>(E);
+	if (pWeapon)
+	{
+		u16 ammo_magsize = pWeapon->get_ammo_magsize();
+		pWeapon->a_elapsed = ammo_magsize;
+	}
+
+	spawn_end(E, m_server->GetServerClient()->ID);
+
+	return true;
+}
+
+void game_sv_freemp::TeleportPlayerTo(ClientID clientID, Fvector& pos, Fvector& angle)
+{
+	xrClientData* CL = (xrClientData*)m_server->ID_to_client(clientID);
+	if (!CL || !CL->net_Ready)
+	{
+		Msg("! ERROR: Can\'t teleport player %u, client not ready.", clientID.value());
+		return;
+	}
+
+	CSE_Abstract* E = m_server->ID_to_entity(CL->ps->GameID);
+	if (!E)
+	{
+		Msg("! ERROR: Can\'t teleport player %u, entity not found.", clientID.value());
+		return;
+	}
+
+	E->o_Position = pos;
+	E->o_Angle = angle;
+
+	NET_Packet P;
+	P.w_begin(M_GAMEMESSAGE);
+	P.w_u32(GAME_EVENT_PLAYER_TELEPORT);
+	P.w_clientID(clientID);
+	P.w_vec3(pos);
+	P.w_vec3(angle);
+	m_server->SendTo(clientID, P, net_flags(TRUE, TRUE));
+}
+
+void game_sv_freemp::TeleportPlayerTo(ClientID clientID, Fvector& pos)
+{
+	Fvector dummy_angle = {0,0,0};
+	TeleportPlayerTo(clientID, pos, dummy_angle);
 }
 
 void game_sv_freemp::OnTransferMoney(NET_Packet & P, ClientID const & clientID)
@@ -364,13 +464,17 @@ void game_sv_freemp::RespawnPlayer(ClientID id_who, bool NoSpectator)
 				spawn_section = "spawn_kit_3";
 			else if (kit_numb == 4)
 				spawn_section = "spawn_kit_4";
+			else
+				spawn_section = "spawn_kit_1";
 
-			money = spawn_file->r_s32("start_money", "money");
+			CInifile spawn_file(m_spawn_config_path, TRUE);
+
+			money = spawn_file.r_s32("start_money", "money");
 			xrCData->ps->money_for_round = money;
 
-			if (spawn_file->section_exist(spawn_section))
+			if (spawn_file.section_exist(spawn_section))
 			{
-				for (u32 k = 0; spawn_file->r_line(spawn_section, k, &N, &V); k++)
+				for (u32 k = 0; spawn_file.r_line(spawn_section, k, &N, &V); k++)
 				{
 					SpawnItemToActor(ps->GameID, N);
 				}
@@ -464,6 +568,263 @@ void game_sv_freemp::assign_RP(CSE_Abstract* E, game_PlayerState* ps_who)
 		inherited::assign_RP(E, ps_who);
 }
 
+void game_sv_freemp::set_account_nickname(LPCSTR login, LPCSTR password, LPCSTR new_nickname, u32 team)
+{
+	jsonxx::Object ret;
+
+	if (FS.path_exist("$mp_saves$"));
+	{
+		string_path path_xray;
+
+		FS.update_path(path_xray, "$mp_saves$", "players.json");
+
+		std::ifstream input(path_xray);
+
+		jsonxx::Object jsonObj;
+
+		if (input.is_open())
+		{
+			std::string str((std::istreambuf_iterator<char>(input)), std::istreambuf_iterator<char>());
+
+			jsonObj.parse(str);
+		}
+
+		input.close();
+ 
+		jsonxx::Array jsonArray;
+
+		if (jsonObj.has<jsonxx::Array>("USERS"))
+			jsonArray = jsonObj.get<jsonxx::Array>("USERS");
+
+		for (int i = 0; i < jsonArray.size(); i++)
+		{
+			jsonxx::Object tab = jsonArray.get<jsonxx::Object>(i);
+
+			if (tab.has<jsonxx::String>("login:"))
+			{
+				std::string login_str = tab.get<jsonxx::String>("login:");
+				std::string password_str = tab.get<jsonxx::String>("password:");
+				
+				bool log = xr_strcmp(login_str.c_str(), login);
+				bool pass = xr_strcmp(password_str.c_str(), password);
+
+				if (!log && !pass)
+				{
+					jsonObj.get<jsonxx::Array>("USERS").get<jsonxx::Object>(i) << "nick:" << jsonxx::String(new_nickname);
+					if (team)
+						jsonObj.get<jsonxx::Array>("USERS").get<jsonxx::Object>(i) << "team:" << jsonxx::Number(team);
+				}
+			}
+
+
+		}
+
+		std::ofstream outfile(path_xray);
+
+		if (outfile.is_open())
+		{
+			outfile.write(jsonObj.json().c_str(), jsonObj.json().size());
+		}
+		else
+		{
+
+		}
+
+		outfile.close();
+
+ 	};
+
+ 
+void game_sv_freemp::set_account_nickname(LPCSTR login, LPCSTR password, LPCSTR new_nickname, u32 team)
+{
+	jsonxx::Object ret;
+
+	if (FS.path_exist("$mp_saves$"));
+	{
+		string_path path_xray;
+
+		FS.update_path(path_xray, "$mp_saves$", "players.json");
+
+		std::ifstream input(path_xray);
+
+		jsonxx::Object jsonObj;
+
+		if (input.is_open())
+		{
+			std::string str((std::istreambuf_iterator<char>(input)), std::istreambuf_iterator<char>());
+
+			jsonObj.parse(str);
+		}
+
+		input.close();
+ 
+		jsonxx::Array jsonArray;
+
+		if (jsonObj.has<jsonxx::Array>("USERS"))
+			jsonArray = jsonObj.get<jsonxx::Array>("USERS");
+
+		for (int i = 0; i < jsonArray.size(); i++)
+		{
+			jsonxx::Object tab = jsonArray.get<jsonxx::Object>(i);
+
+			if (tab.has<jsonxx::String>("login:"))
+			{
+				std::string login_str = tab.get<jsonxx::String>("login:");
+				std::string password_str = tab.get<jsonxx::String>("password:");
+				
+				bool log = xr_strcmp(login_str.c_str(), login);
+				bool pass = xr_strcmp(password_str.c_str(), password);
+
+				if (!log && !pass)
+				{
+					jsonObj.get<jsonxx::Array>("USERS").get<jsonxx::Object>(i) << "nick:" << jsonxx::String(new_nickname);
+					if (team)
+						jsonObj.get<jsonxx::Array>("USERS").get<jsonxx::Object>(i) << "team:" << jsonxx::Number(team);
+				}
+			}
+
+
+		}
+
+		std::ofstream outfile(path_xray);
+
+		if (outfile.is_open())
+		{
+			outfile.write(jsonObj.json().c_str(), jsonObj.json().size());
+		}
+		else
+		{
+
+		}
+
+		outfile.close();
+
+ 	};
+
+ 
+}
+
+int game_sv_freemp::get_account_data(LPCSTR login, LPCSTR password, bool& leader, u8& team_to_lead)
+{
+	int team = 0;
+	if (FS.path_exist("$mp_saves$"));
+	{
+		string_path path_xray;
+
+		FS.update_path(path_xray, "$mp_saves$", "players.json");
+
+		std::ifstream input(path_xray);
+
+		jsonxx::Object jsonObj;
+
+		if (input.is_open())
+		{
+			std::string str((std::istreambuf_iterator<char>(input)), std::istreambuf_iterator<char>());
+
+			jsonObj.parse(str);
+		}
+
+		input.close();
+
+		jsonxx::Array jsonArray;
+
+		if (jsonObj.has<jsonxx::Array>("USERS"))
+			jsonArray = jsonObj.get<jsonxx::Array>("USERS");
+
+		for (int i = 0; i < jsonArray.size(); i++)
+		{
+			jsonxx::Object tab = jsonArray.get<jsonxx::Object>(i);
+			
+			if (tab.has<jsonxx::String>("login:"))
+			if (!xr_strcmp(tab.get<jsonxx::String>("login:").c_str(), login))
+			{
+				if (tab.has<jsonxx::String>("password:"))
+				if (!xr_strcmp(tab.get<jsonxx::String>("password:").c_str(), password))
+				{
+					if (tab.has<jsonxx::Number>("team:"))
+						team = tab.get<jsonxx::Number>("team:");
+
+					if (tab.has<jsonxx::Number>("leader:") && tab.has<jsonxx::Number>("team_leading:"))
+					{
+						u8 lead = tab.get<jsonxx::Number>("leader:");
+						u8 team_lead = tab.get<jsonxx::Number>("team_leading:");
+						if (lead == 1)
+						{
+							leader = true;
+							team_to_lead = static_cast<u8>(team_lead);
+						}
+						else
+						{
+							leader = false;
+							team_to_lead = u8(-1);
+						}
+					}
+				}
+			}		
+		}
+	}
+	 
+	return team;
+}
+
+void game_sv_freemp::ChangeTeamJson(LPCSTR login, LPCSTR password, u8 team)
+{
+	string_path path_xray;
+
+	if (FS.path_exist("$mp_saves$"))
+		FS.update_path(path_xray, "$mp_saves$", "players.json");
+	else
+		return;
+
+	jsonxx::Object jsonObj;
+
+	std::ifstream input(path_xray);
+
+
+	if (input.is_open())
+	{
+		std::string str((std::istreambuf_iterator<char>(input)), std::istreambuf_iterator<char>());
+
+		jsonObj.parse(str);
+	}
+
+	input.close();
+
+	jsonxx::Array jsonArray;
+
+	if (jsonObj.has<jsonxx::Array>("USERS"))
+		jsonArray = jsonObj.get<jsonxx::Array>("USERS");
+
+	for (int i = 0; i < jsonArray.size(); i++)
+	{
+		jsonxx::Object tab = jsonArray.get<jsonxx::Object>(i);
+
+		if (tab.has<jsonxx::String>("login:"))
+		{
+			std::string login_str = tab.get<jsonxx::String>("login:");
+			std::string password_str = tab.get<jsonxx::String>("password:");
+
+			bool log = xr_strcmp(login_str.c_str(), login);
+			bool pass = xr_strcmp(password_str.c_str(), password);
+
+			if (!log && !pass)
+			{
+				if (team)
+					jsonObj.get<jsonxx::Array>("USERS").get<jsonxx::Object>(i) << "team:" << jsonxx::Number(team);
+			}
+		}
+	}
+
+	std::ofstream outfile(path_xray);
+
+	if (outfile.is_open())
+	{
+		outfile.write(jsonObj.json().c_str(), jsonObj.json().size());
+	}
+
+	outfile.close();
+}
+
 void game_sv_freemp::OnEvent(NET_Packet &P, u16 type, u32 time, ClientID sender)
 {
 	switch (type)
@@ -486,6 +847,14 @@ void game_sv_freemp::OnEvent(NET_Packet &P, u16 type, u32 time, ClientID sender)
 			OnTransferMoney(P, sender);
 		}
 		break;
+	case GAME_EVENT_UI_PDA_SERVER:
+	{
+		RecivePdaContactMSG(P, sender);
+	}break;
+	case GAME_EVENT_UI_PDA_CHAT_SERVER:
+	{
+		RecivePdaChatMSG(P, sender);
+	}break;
 	default:
 		inherited::OnEvent(P, type, time, sender);
 	};
@@ -506,6 +875,7 @@ void game_sv_freemp::Update()
 	DynamicWeatherUpdate();
 	DynamicMusicUpdate();
 	DynamicBoxUpdate();
+	UpdateAlifeData();
 
 	if(Saver)
 		Saver->SaveManagerUpdate();
@@ -556,4 +926,63 @@ ALife::_TIME_ID game_sv_freemp::GetEnvironmentGameTime()
 		return(alife().time_manager().game_time());
 	else
 		return(inherited::GetGameTime());
+}
+
+float game_sv_freemp::GetEnvironmentGameTimeFactor()
+{
+	return(inherited::GetEnvironmentGameTimeFactor());
+}
+
+void game_sv_freemp::SetEnvironmentGameTimeFactor(const float fTimeFactor)
+{
+	return(inherited::SetEnvironmentGameTimeFactor(fTimeFactor));
+}
+
+// Comprehensive Server-Side Game Management
+bool game_sv_freemp::change_level(NET_Packet& net_packet, ClientID sender)
+{
+	if (ai().get_alife())
+		return					(alife().change_level(net_packet));
+	else
+		return					(false);
+}
+
+void game_sv_freemp::restart_simulator(LPCSTR saved_game_name)
+{
+	shared_str& options = *alife().server_command_line();
+
+	delete_data(m_alife_simulator);
+	server().clear_ids();
+
+	xr_strcpy(g_pGamePersistent->m_game_params.m_game_or_spawn, saved_game_name);
+	xr_strcpy(g_pGamePersistent->m_game_params.m_new_or_load, "load");
+
+	pApp->ls_header[0] = '\0';
+	pApp->ls_tip_number[0] = '\0';	pApp->ls_tip[0] = '\0';
+	pApp->LoadBegin();
+
+	m_alife_simulator = xr_new<CALifeSimulator>(&server(), &options);
+	//loaded_inventory = false; // This line is commented out in source, so I'll keep it commented.
+
+	g_pGamePersistent->LoadTitle("st_client_synchronising");
+ 	Device.PreCache(60, true, true);
+	pApp->LoadEnd();
+}
+
+void game_sv_freemp::save_game(NET_Packet& net_packet, ClientID sender)
+{
+	if (!ai().get_alife())
+		return;
+
+	alife().save(net_packet);
+}
+
+bool game_sv_freemp::load_game(NET_Packet& net_packet, ClientID sender)
+{
+	if (!ai().get_alife())
+		return					(inherited::load_game(net_packet, sender));
+
+	shared_str						game_name;
+	net_packet.r_stringZ(game_name);
+	return	(alife().load_game(*game_name, true));
 }

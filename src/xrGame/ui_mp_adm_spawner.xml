@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<w>
+    <ui_mp_adm_spawner x="0" y="0" width="1024" height="768" stretch="1" heading="Admin Spawner">
+        <background x="0" y="0" width="1024" height="768" stretch="1">
+            <texture>ui_inGame2_screen_panels_01</texture>
+        </background>
+
+        <background_description x="700" y="100" width="300" height="600" stretch="1">
+            <texture>ui_inGame2_screen_panels_02</texture>
+        </background_description>
+
+        <tab_control x="50" y="50" width="924" height="50" stretch="1" wnd_name="tab_control">
+            <button id="weapons" x="0" y="0" width="100" height="50" stretch="1">
+                <text_color r="255" g="255" b="255" />
+                <texture>ui_inGame2_checkbox</texture>
+                <text x="0" y="0" width="100" height="20">Weapons</text>
+            </button>
+            <button id="ammos" x="100" y="0" width="100" height="50" stretch="1">
+                <text_color r="255" g="255" b="255" />
+                <texture>ui_inGame2_checkbox</texture>
+                <text x="0" y="0" width="100" height="20">Ammos</text>
+            </button>
+            <button id="addons" x="200" y="0" width="100" height="50" stretch="1">
+                <text_color r="255" g="255" b="255" />
+                <texture>ui_inGame2_checkbox</texture>
+                <text x="0" y="0" width="100" height="20">Addons</text>
+            </button>
+            <button id="outfits" x="300" y="0" width="100" height="50" stretch="1">
+                <text_color r="255" g="255" b="255" />
+                <texture>ui_inGame2_checkbox</texture>
+                <text x="0" y="0" width="100" height="20">Outfits</text>
+            </button>
+            <button id="artefacts" x="400" y="0" width="100" height="50" stretch="1">
+                <text_color r="255" g="255" b="255" />
+                <texture>ui_inGame2_checkbox</texture>
+                <text x="0" y="0" width="100" height="20">Artefacts</text>
+            </button>
+            <button id="items" x="500" y="0" width="100" height="50" stretch="1">
+                <text_color r="255" g="255" b="255" />
+                <texture>ui_inGame2_checkbox</texture>
+                <text x="0" y="0" width="100" height="20">Items</text>
+            </button>
+            <button id="quests" x="600" y="0" width="100" height="50" stretch="1">
+                <text_color r="255" g="255" b="255" />
+                <texture>ui_inGame2_checkbox</texture>
+                <text x="0" y="0" width="100" height="20">Quests</text>
+            </button>
+            <button id="uniques" x="700" y="0" width="100" height="50" stretch="1">
+                <text_color r="255" g="255" b="255" />
+                <texture>ui_inGame2_checkbox</texture>
+                <text x="0" y="0" width="100" height="20">Uniques</text>
+            </button>
+            <!-- New tabs -->
+            <button id="ixray_searcher" x="0" y="50" width="100" height="50" stretch="1">
+                <text_color r="255" g="255" b="255" />
+                <texture>ui_inGame2_checkbox</texture>
+                <text x="0" y="0" width="100" height="20">IXray-Searcher</text>
+            </button>
+            <button id="log" x="100" y="50" width="100" height="50" stretch="1">
+                <text_color r="255" g="255" b="255" />
+                <texture>ui_inGame2_checkbox</texture>
+                <text x="0" y="0" width="100" height="20">Log</text>
+            </button>
+            <button id="weather" x="200" y="50" width="100" height="50" stretch="1">
+                <text_color r="255" g="255" b="255" />
+                <texture>ui_inGame2_checkbox</texture>
+                <text x="0" y="0" width="100" height="20">Weather</text>
+            </button>
+            <button id="player_options" x="300" y="50" width="100" height="50" stretch="1">
+                <text_color r="255" g="255" b="255" />
+                <texture>ui_inGame2_checkbox</texture>
+                <text x="0" y="0" width="100" height="20">Player Options</text>
+            </button>
+            <button id="anomaly_options" x="400" y="50" width="100" height="50" stretch="1">
+                <text_color r="255" g="255" b="255" />
+                <texture>ui_inGame2_checkbox</texture>
+                <text x="0" y="0" width="100" height="20">Anomaly Options</text>
+            </button>
+            <button id="stats" x="500" y="50" width="100" height="50" stretch="1">
+                <text_color r="255" g="255" b="255" />
+                <texture>ui_inGame2_checkbox</texture>
+                <text x="0" y="0" width="100" height="20">Stats</text>
+            </button>
+        </tab_control>
+
+        <scroll_v x="50" y="100" width="300" height="400" stretch="1" />
+
+        <skin_list x="50" y="100" width="300" height="400" stretch="1">
+            <text_color r="255" g="255" b="255" />
+        </skin_list>
+
+        <spawn_item_button x="50" y="550" width="100" height="30" stretch="1">
+            <text_color r="255" g="255" b="255" />
+            <texture>ui_inGame2_button_normal</texture>
+            <text x="0" y="0" width="100" height="30">Spawn Item</text>
+        </spawn_item_button>
+
+        <close_button x="900" y="700" width="100" height="30" stretch="1">
+            <text_color r="255" g="255" b="255" />
+            <texture>ui_inGame2_button_normal</texture>
+            <text x="0" y="0" width="100" height="30">Close</text>
+        </close_button>
+
+        <!-- Item description elements -->
+        <itm_name x="700" y="150" width="280" height="20">
+            <text font="graffiti22" r="255" g="255" b="255" />
+        </itm_name>
+        <itm_weight x="700" y="170" width="280" height="20">
+            <text font="graffiti19" r="255" g="255" b="255" />
+        </itm_weight>
+        <itm_cost x="700" y="190" width="280" height="20">
+            <text font="graffiti19" r="255" g="255" b="255" />
+        </itm_cost>
+        <itm_desc x="700" y="210" width="280" height="300">
+            <text font="graffiti19" r="255" g="255" b="255" />
+        </itm_desc>
+
+        <!-- New tab content sections -->
+        <ixray_searcher_back x="50" y="100" width="600" height="600" stretch="1">
+            <text font="graffiti22" r="255" g="255" b="255" />
+            <text_color r="255" g="255" b="255" />
+            <texture>ui_inGame2_screen_panels_03</texture>
+            <edit_box x="10" y="10" width="400" height="30" wnd_name="ixray_searcher_input">
+                <text font="graffiti19" r="255" g="255" b="255" />
+            </edit_box>
+            <button x="420" y="10" width="100" height="30" wnd_name="ixray_searcher_button">
+                <text_color r="255" g="255" b="255" />
+                <texture>ui_inGame2_button_normal</texture>
+                <text x="0" y="0" width="100" height="30">Search</text>
+            </button>
+            <list_box x="10" y="50" width="580" height="540" wnd_name="ixray_searcher_results">
+                <text_color r="255" g="255" b="255" />
+            </list_box>
+        </ixray_searcher_back>
+
+        <log_back x="50" y="100" width="600" height="600" stretch="1">
+            <text font="graffiti22" r="255" g="255" b="255" />
+            <text_color r="255" g="255" b="255" />
+            <texture>ui_inGame2_screen_panels_03</texture>
+            <scroll_view x="10" y="10" width="580" height="580" wnd_name="log_scroll_view">
+                <text_color r="255" g="255" b="255" />
+            </scroll_view>
+        </log_back>
+
+        <weather_back x="50" y="100" width="600" height="600" stretch="1">
+            <text font="graffiti22" r="255" g="255" b="255" />
+            <text_color r="255" g="255" b="255" />
+            <texture>ui_inGame2_screen_panels_03</texture>
+            <combo_box x="10" y="10" width="200" height="30" wnd_name="weather_combo_box">
+                <text_color r="255" g="255" b="255" />
+            </combo_box>
+            <button x="220" y="10" width="100" height="30" wnd_name="apply_weather_button">
+                <text_color r="255" g="255" b="255" />
+                <texture>ui_inGame2_button_normal</texture>
+                <text x="0" y="0" width="100" height="30">Apply</text>
+            </button>
+        </weather_back>
+
+        <player_options_back x="50" y="100" width="600" height="600" stretch="1">
+            <text font="graffiti22" r="255" g="255" b="255" />
+            <text_color r="255" g="255" b="255" />
+            <texture>ui_inGame2_screen_panels_03</texture>
+            <button x="10" y="10" width="150" height="30" wnd_name="god_mode_button">
+                <text_color r="255" g="255" b="255" />
+                <texture>ui_inGame2_button_normal</texture>
+                <text x="0" y="0" width="150" height="30">Toggle God Mode</text>
+            </button>
+            <button x="10" y="50" width="150" height="30" wnd_name="noclip_button">
+                <text_color r="255" g="255" b="255" />
+                <texture>ui_inGame2_button_normal</texture>
+                <text x="0" y="0" width="150" height="30">Toggle Noclip</text>
+            </button>
+        </player_options_back>
+
+        <anomaly_options_back x="50" y="100" width="600" height="600" stretch="1">
+            <text font="graffiti22" r="255" g="255" b="255" />
+            <text_color r="255" g="255" b="255" />
+            <texture>ui_inGame2_screen_panels_03</texture>
+            <combo_box x="10" y="10" width="200" height="30" wnd_name="anomaly_combo_box">
+                <text_color r="255" g="255" b="255" />
+            </combo_box>
+            <button x="220" y="10" width="100" height="30" wnd_name="spawn_anomaly_button">
+                <text_color r="255" g="255" b="255" />
+                <texture>ui_inGame2_button_normal</texture>
+                <text x="0" y="0" width="100" height="30">Spawn</text>
+            </button>
+        </anomaly_options_back>
+
+        <stats_back x="50" y="100" width="600" height="600" stretch="1">
+            <text font="graffiti22" r="255" g="255" b="255" />
+            <text_color r="255" g="255" b="255" />
+            <texture>ui_inGame2_screen_panels_03</texture>
+            <scroll_view x="10" y="10" width="580" height="580" wnd_name="stats_scroll_view">
+                <text_color r="255" g="255" b="255" />
+            </scroll_view>
+        </stats_back>
+
+    </ui_mp_adm_spawner>
+</w>

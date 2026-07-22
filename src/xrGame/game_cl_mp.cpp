@@ -24,6 +24,8 @@
 #include "ui/KillMessageStruct.h"
 #include "ui/UISpeechMenu.h"
 #include "UIGameMP.h"
+#include "UIAdminSpawner.h"
+#include "UIAdminSkin.h"
 
 #include "string_table.h"
 #include "clsid_game.h"
@@ -63,6 +65,8 @@ game_cl_mp::game_cl_mp()
 	m_bVotingActive = false;
 	m_pVoteStartWindow = NULL;
 	m_pAdminMenuWindow = NULL;
+	m_pAdminSkinSelectorWindow = nullptr;
+	m_pAdminSpawnerWindow = nullptr;
 	m_pVoteRespondWindow = NULL;
 	m_pMessageBox = NULL;
 	
@@ -146,6 +150,8 @@ game_cl_mp::~game_cl_mp()
 	xr_delete(m_pVoteRespondWindow);
 	xr_delete(m_pVoteStartWindow);
 	xr_delete(m_pAdminMenuWindow);
+	xr_delete(m_pAdminSkinSelectorWindow);
+	xr_delete(m_pAdminSpawnerWindow);
 	xr_delete(m_pMessageBox);
 
 	xr_delete(m_reward_generator);
@@ -195,6 +201,30 @@ bool game_cl_mp::OnKeyboardPress(int key)
 			}
 			}break;
 
+		case kSHOW_ADMIN_SKIN_SELECTOR:
+			{
+				if (!m_pAdminSkinSelectorWindow)
+					m_pAdminSkinSelectorWindow = xr_new<CUISkinSelector>();
+
+				if (local_player && local_player->testFlag(GAME_PLAYER_HAS_ADMIN_RIGHTS))
+				{
+					m_pAdminSkinSelectorWindow->Init();
+					if (!m_pAdminSkinSelectorWindow->IsShown())
+						m_pAdminSkinSelectorWindow->ShowDialog(true);
+				}
+			}break;
+		case kSHOW_ADMIN_SPAWNER:
+			{
+				if (!m_pAdminSpawnerWindow)
+					m_pAdminSpawnerWindow = xr_new<CUIAdminSpawner>();
+
+				if (local_player && local_player->testFlag(GAME_PLAYER_HAS_ADMIN_RIGHTS))
+				{
+					m_pAdminSpawnerWindow->Init();
+					if (!m_pAdminSpawnerWindow->IsShown())
+						m_pAdminSpawnerWindow->ShowDialog(true);
+				}
+			}break;
 		case kSHOW_ADMIN_MENU:
 			{
 				if(!m_pAdminMenuWindow)
@@ -429,7 +459,7 @@ void game_cl_mp::ChatSay(LPCSTR	phrase, bool bAll)
 
 
 		string256 str;
-		sprintf(str, "Отправленно [%s -> %s (private)]",local_player->getName(), nameofprivate);
+		sprintf(str, "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ [%s -> %s (private)]",local_player->getName(), nameofprivate);
 		GAME_NEWS_DATA				news_data;
 		news_data.m_type = (GAME_NEWS_DATA::eNewsType)0;
 		news_data.news_caption = str;

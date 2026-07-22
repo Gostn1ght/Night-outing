@@ -23,129 +23,101 @@ void game_sv_freemp::DynamicBoxUpdate()
 
 void game_sv_freemp::DynamicBoxFileCreate()
 {
-	string_path spawn_trash_path, spawn_boosters_path, spawn_weapons_devices_path,
-		spawn_ammo_path, spawn_explosive_path, spawn_weapons_path;
+	FS.update_path(m_inventory_box_config_path, "$game_config$", "alife\\inventory_boxes.json");
 
-	FS.update_path(spawn_trash_path, "$game_config$", "alife\\spawn_trash.ltx");
-	FS.update_path(spawn_boosters_path, "$game_config$", "alife\\spawn_boosters.ltx");
-	FS.update_path(spawn_weapons_devices_path, "$game_config$", "alife\\spawn_weapons_devices.ltx");
-	FS.update_path(spawn_ammo_path, "$game_config$", "alife\\spawn_ammo.ltx");
-	FS.update_path(spawn_explosive_path, "$game_config$", "alife\\spawn_explosive.ltx");
-	FS.update_path(spawn_weapons_path, "$game_config$", "alife\\spawn_weapons.ltx");
+	std::ifstream file(m_inventory_box_config_path);
+	if (file.is_open())
+	{
+		std::stringstream buffer;
+		buffer << file.rdbuf();
+		file.close();
 
-	spawn_trash = xr_new<CInifile>(spawn_trash_path, true, true);
-	spawn_boosters = xr_new<CInifile>(spawn_boosters_path, true, true);
-	spawn_weapons_devices = xr_new<CInifile>(spawn_weapons_devices_path, true, true);
-	spawn_ammo = xr_new<CInifile>(spawn_ammo_path, true, true);
-	spawn_explosive = xr_new<CInifile>(spawn_explosive_path, true, true);
-	spawn_weapons = xr_new<CInifile>(spawn_weapons_path, true, true);
+		if (!m_inventory_box_config_json.parse(buffer.str()))
+		{
+			Msg("! ERROR: Failed to parse inventory_boxes.json");
+		}
+	}
+	else
+	{
+		Msg("! ERROR: Failed to open inventory_boxes.json at path: %s", m_inventory_box_config_path);
+	}
 }
 
 
 void game_sv_freemp::SpawnInvBoxesItems(CSE_ALifeInventoryBox* box)
 {
 	LPCSTR boxfile = box->m_ini_string.c_str();
-	CInifile					ini(
-		&IReader(
-			(void*)(boxfile),
-			xr_strlen(boxfile)
-		),
-		FS.get_path("$game_config$")->m_Path
-	);
 
-	CInifile* tmp = NULL;
+	jsonxx::Object* spawn_section_obj = nullptr;
 
-	if (ini.section_exist("spawn_trash"))
+	if (m_inventory_box_config_json.has<jsonxx::Object>("spawn_trash") && xr_strcmp(box->m_ini_string.c_str(), "spawn_trash") == 0)
 	{
-		tmp = spawn_trash;
+		spawn_section_obj = &m_inventory_box_config_json.get<jsonxx::Object>("spawn_trash");
 	}
-	else if (ini.section_exist("spawn_boosters"))
+	else if (m_inventory_box_config_json.has<jsonxx::Object>("spawn_boosters") && xr_strcmp(box->m_ini_string.c_str(), "spawn_boosters") == 0)
 	{
-		tmp = spawn_boosters;
+		spawn_section_obj = &m_inventory_box_config_json.get<jsonxx::Object>("spawn_boosters");
 	}
-	else if (ini.section_exist("spawn_weapons_devices"))
+	else if (m_inventory_box_config_json.has<jsonxx::Object>("spawn_weapons_devices") && xr_strcmp(box->m_ini_string.c_str(), "spawn_weapons_devices") == 0)
 	{
-		tmp = spawn_weapons_devices;
+		spawn_section_obj = &m_inventory_box_config_json.get<jsonxx::Object>("spawn_weapons_devices");
 	}
-	else if (ini.section_exist("spawn_ammo"))
+	else if (m_inventory_box_config_json.has<jsonxx::Object>("spawn_ammo") && xr_strcmp(box->m_ini_string.c_str(), "spawn_ammo") == 0)
 	{
-		tmp = spawn_ammo;
+		spawn_section_obj = &m_inventory_box_config_json.get<jsonxx::Object>("spawn_ammo");
 	}
-	else if (ini.section_exist("spawn_explosive"))
+	else if (m_inventory_box_config_json.has<jsonxx::Object>("spawn_explosive") && xr_strcmp(box->m_ini_string.c_str(), "spawn_explosive") == 0)
 	{
-		tmp = spawn_explosive;
+		spawn_section_obj = &m_inventory_box_config_json.get<jsonxx::Object>("spawn_explosive");
 	}
-	else if (ini.section_exist("spawn_weapons"))
+	else if (m_inventory_box_config_json.has<jsonxx::Object>("spawn_weapons") && xr_strcmp(box->m_ini_string.c_str(), "spawn_weapons") == 0)
 	{
-		tmp = spawn_weapons;
+		spawn_section_obj = &m_inventory_box_config_json.get<jsonxx::Object>("spawn_weapons");
 	}
 
-	if (tmp != nullptr)
+	if (spawn_section_obj != nullptr && spawn_section_obj->has<jsonxx::Array>("spawn"))
 	{
-		LPCSTR					N, V;
-		float					p;
-
-		if (tmp->section_exist("spawn"))
+		jsonxx::Array& spawn_items_array = spawn_section_obj->get<jsonxx::Array>("spawn");
+		for (size_t k = 0; k < spawn_items_array.size(); ++k)
 		{
-			for (u32 k = 0, j; tmp->r_line("spawn", k, &N, &V); k++)
-			{
-				VERIFY(xr_strlen(N));
+			if (!spawn_items_array.has<jsonxx::Object>((unsigned int)k)) continue;
+			jsonxx::Object& item_obj = spawn_items_array.get<jsonxx::Object>((unsigned int)k);
 
-				float f_cond = 1.0f;
-				bool bScope = false;
-				bool bSilencer = false;
-				bool bLauncher = false;
+			std::string N = item_obj.get<jsonxx::String>("name", std::string());
+			int j = (int)item_obj.get<jsonxx::Number>("count", 0);
+			float p = (float)item_obj.get<jsonxx::Number>("probability", 0);
+			float f_cond = (float)item_obj.get<jsonxx::Number>("condition", 0);
+			bool bScope = item_obj.get<jsonxx::Boolean>("scope", false);
+			bool bSilencer = item_obj.get<jsonxx::Boolean>("silencer", false);
+			bool bLauncher = item_obj.get<jsonxx::Boolean>("launcher", false);
+			int cur_scope = (int)item_obj.get<jsonxx::Number>("cur_scope", 0);
 
+			VERIFY(N.length());
 
-				int cur_scope = 0;
+			for (u32 i = 0; i < j; ++i) {
+				if (Random.randF(1.f) < p) {
+					CSE_Abstract* E = spawn_begin(N.c_str());
+					E->ID_Parent = box->ID;
 
-				j = 1;
-				p = 1.f;
-
-				if (V && xr_strlen(V)) {
-					string64			buf;
-					j = atoi(_GetItem(V, 0, buf));
-					if (!j)		j = 1;
-
-					bScope = (NULL != strstr(V, "scope"));
-					bSilencer = (NULL != strstr(V, "silencer"));
-					bLauncher = (NULL != strstr(V, "launcher"));
-					//probability
-					if (NULL != strstr(V, "prob="))
-						p = (float)atof(strstr(V, "prob=") + 5);
-					if (fis_zero(p)) p = 1.0f;
-					if (NULL != strstr(V, "cond="))
-						f_cond = (float)atof(strstr(V, "cond=") + 5);
-					if (nullptr != strstr(V, "scope="))
-						cur_scope = atoi(strstr(V, "scope=") + 6);
-				}
-				for (u32 i = 0; i < j; ++i) {
-					if (Random.randF(1.f) < p) {
-						//CSE_Abstract* E = alife().spawn_item(N, box->o_Position, box->m_tNodeID, box->m_tGraphID, box->ID);
-						CSE_Abstract* E = spawn_begin(N);
-						E->ID_Parent = box->ID;
-
-						//подсоединить аддоны к оружию, если включены соответствующие флажки
-						CSE_ALifeItemWeapon* W = smart_cast<CSE_ALifeItemWeapon*>(E);
-						if (W) {
-							if (W->m_scope_status == ALife::eAddonAttachable)
-							{
-								W->m_addon_flags.set(CSE_ALifeItemWeapon::eWeaponAddonScope, bScope);
-								W->m_cur_scope = cur_scope;
-							}
-							if (W->m_silencer_status == ALife::eAddonAttachable)
-								W->m_addon_flags.set(CSE_ALifeItemWeapon::eWeaponAddonSilencer, bSilencer);
-							if (W->m_grenade_launcher_status == ALife::eAddonAttachable)
-								W->m_addon_flags.set(CSE_ALifeItemWeapon::eWeaponAddonGrenadeLauncher, bLauncher);
-						}
-						CSE_ALifeInventoryItem* IItem = smart_cast<CSE_ALifeInventoryItem*>(E);
-						if (IItem)
+					CSE_ALifeItemWeapon* W = smart_cast<CSE_ALifeItemWeapon*>(E);
+					if (W) {
+						if (W->m_scope_status == ALife::eAddonAttachable)
 						{
-							f_cond = Random.randF(0.0f, 0.6f);
-							IItem->m_fCondition = f_cond;
+							W->m_addon_flags.set(CSE_ALifeItemWeapon::eWeaponAddonScope, bScope);
+							W->m_cur_scope = cur_scope;
 						}
-						spawn_end(E, m_server->GetServerClient()->ID);
+						if (W->m_silencer_status == ALife::eAddonAttachable)
+							W->m_addon_flags.set(CSE_ALifeItemWeapon::eWeaponAddonSilencer, bSilencer);
+						if (W->m_grenade_launcher_status == ALife::eAddonAttachable)
+							W->m_addon_flags.set(CSE_ALifeItemWeapon::eWeaponAddonGrenadeLauncher, bLauncher);
 					}
+					CSE_ALifeInventoryItem* IItem = smart_cast<CSE_ALifeInventoryItem*>(E);
+					if (IItem)
+					{
+						f_cond = Random.randF(0.0f, 0.6f);
+						IItem->m_fCondition = f_cond;
+					}
+					spawn_end(E, m_server->GetServerClient()->ID);
 				}
 			}
 		}
@@ -155,103 +127,74 @@ void game_sv_freemp::SpawnInvBoxesItems(CSE_ALifeInventoryBox* box)
 void game_sv_freemp::OnStartSpawnInvBoxesItems(CSE_ALifeInventoryBox* box)
 {
 	LPCSTR boxfile = box->m_ini_string.c_str();
-	CInifile					ini(
-		&IReader(
-			(void*)(boxfile),
-			xr_strlen(boxfile)
-		),
-		FS.get_path("$game_config$")->m_Path
-	);
 
-	CInifile* tmp = NULL;
+	jsonxx::Object* spawn_section_obj = nullptr;
 
-	if (ini.section_exist("spawn_trash"))
+	if (m_inventory_box_config_json.has<jsonxx::Object>("spawn_trash") && xr_strcmp(box->m_ini_string.c_str(), "spawn_trash") == 0)
 	{
-		tmp = spawn_trash;
+		spawn_section_obj = &m_inventory_box_config_json.get<jsonxx::Object>("spawn_trash");
 	}
-	else if (ini.section_exist("spawn_boosters"))
+	else if (m_inventory_box_config_json.has<jsonxx::Object>("spawn_boosters") && xr_strcmp(box->m_ini_string.c_str(), "spawn_boosters") == 0)
 	{
-		tmp = spawn_boosters;
+		spawn_section_obj = &m_inventory_box_config_json.get<jsonxx::Object>("spawn_boosters");
 	}
-	else if (ini.section_exist("spawn_weapons_devices"))
+	else if (m_inventory_box_config_json.has<jsonxx::Object>("spawn_weapons_devices") && xr_strcmp(box->m_ini_string.c_str(), "spawn_weapons_devices") == 0)
 	{
-		tmp = spawn_weapons_devices;
+		spawn_section_obj = &m_inventory_box_config_json.get<jsonxx::Object>("spawn_weapons_devices");
 	}
-	else if (ini.section_exist("spawn_ammo"))
+	else if (m_inventory_box_config_json.has<jsonxx::Object>("spawn_ammo") && xr_strcmp(box->m_ini_string.c_str(), "spawn_ammo") == 0)
 	{
-		tmp = spawn_ammo;
+		spawn_section_obj = &m_inventory_box_config_json.get<jsonxx::Object>("spawn_ammo");
 	}
-	else if (ini.section_exist("spawn_explosive"))
+	else if (m_inventory_box_config_json.has<jsonxx::Object>("spawn_explosive") && xr_strcmp(box->m_ini_string.c_str(), "spawn_explosive") == 0)
 	{
-		tmp = spawn_explosive;
+		spawn_section_obj = &m_inventory_box_config_json.get<jsonxx::Object>("spawn_explosive");
 	}
-	else if (ini.section_exist("spawn_weapons"))
+	else if (m_inventory_box_config_json.has<jsonxx::Object>("spawn_weapons") && xr_strcmp(box->m_ini_string.c_str(), "spawn_weapons") == 0)
 	{
-		tmp = spawn_weapons;
+		spawn_section_obj = &m_inventory_box_config_json.get<jsonxx::Object>("spawn_weapons");
 	}
 
-	if (tmp != nullptr)
+	if (spawn_section_obj != nullptr && spawn_section_obj->has<jsonxx::Array>("spawn"))
 	{
-		LPCSTR					N, V;
-		float					p;
-
-		if (tmp->section_exist("spawn"))
+		jsonxx::Array& spawn_items_array = spawn_section_obj->get<jsonxx::Array>("spawn");
+		for (size_t k = 0; k < spawn_items_array.size(); ++k)
 		{
-			for (u32 k = 0, j; tmp->r_line("spawn", k, &N, &V); k++)
-			{
-				VERIFY(xr_strlen(N));
+			if (!spawn_items_array.has<jsonxx::Object>((unsigned int)k)) continue;
+			jsonxx::Object& item_obj = spawn_items_array.get<jsonxx::Object>((unsigned int)k);
 
-				float f_cond = 1.0f;
-				bool bScope = false;
-				bool bSilencer = false;
-				bool bLauncher = false;
+			std::string N = item_obj.get<jsonxx::String>("name", std::string());
+			int j = (int)item_obj.get<jsonxx::Number>("count", 0);
+			float p = (float)item_obj.get<jsonxx::Number>("probability", 0);
+			float f_cond = (float)item_obj.get<jsonxx::Number>("condition", 0);
+			bool bScope = item_obj.get<jsonxx::Boolean>("scope", false);
+			bool bSilencer = item_obj.get<jsonxx::Boolean>("silencer", false);
+			bool bLauncher = item_obj.get<jsonxx::Boolean>("launcher", false);
+			int cur_scope = (int)item_obj.get<jsonxx::Number>("cur_scope", 0);
 
+			VERIFY(N.length());
 
-				int cur_scope = 0;
+			for (u32 i = 0; i < j; ++i) {
+				if (Random.randF(1.f) < p) {
+					CSE_Abstract* E = alife().spawn_item(N.c_str(), box->o_Position, box->m_tNodeID, box->m_tGraphID, box->ID);
 
-				j = 1;
-				p = 1.f;
-
-				if (V && xr_strlen(V)) {
-					string64			buf;
-					j = atoi(_GetItem(V, 0, buf));
-					if (!j)		j = 1;
-
-					bScope = (NULL != strstr(V, "scope"));
-					bSilencer = (NULL != strstr(V, "silencer"));
-					bLauncher = (NULL != strstr(V, "launcher"));
-					//probability
-					if (NULL != strstr(V, "prob="))
-						p = (float)atof(strstr(V, "prob=") + 5);
-					if (fis_zero(p)) p = 1.0f;
-					if (NULL != strstr(V, "cond="))
-						f_cond = (float)atof(strstr(V, "cond=") + 5);
-					if (nullptr != strstr(V, "scope="))
-						cur_scope = atoi(strstr(V, "scope=") + 6);
-				}
-				for (u32 i = 0; i < j; ++i) {
-					if (Random.randF(1.f) < p) {
-						CSE_Abstract* E = alife().spawn_item(N, box->o_Position, box->m_tNodeID, box->m_tGraphID, box->ID);
-
-						//подсоединить аддоны к оружию, если включены соответствующие флажки
-						CSE_ALifeItemWeapon* W = smart_cast<CSE_ALifeItemWeapon*>(E);
-						if (W) {
-							if (W->m_scope_status == ALife::eAddonAttachable)
-							{
-								W->m_addon_flags.set(CSE_ALifeItemWeapon::eWeaponAddonScope, bScope);
-								W->m_cur_scope = cur_scope;
-							}
-							if (W->m_silencer_status == ALife::eAddonAttachable)
-								W->m_addon_flags.set(CSE_ALifeItemWeapon::eWeaponAddonSilencer, bSilencer);
-							if (W->m_grenade_launcher_status == ALife::eAddonAttachable)
-								W->m_addon_flags.set(CSE_ALifeItemWeapon::eWeaponAddonGrenadeLauncher, bLauncher);
-						}
-						CSE_ALifeInventoryItem* IItem = smart_cast<CSE_ALifeInventoryItem*>(E);
-						if (IItem)
+					CSE_ALifeItemWeapon* W = smart_cast<CSE_ALifeItemWeapon*>(E);
+					if (W) {
+						if (W->m_scope_status == ALife::eAddonAttachable)
 						{
-							f_cond = Random.randF(0.0f, 0.6f);
-							IItem->m_fCondition = f_cond;
+							W->m_addon_flags.set(CSE_ALifeItemWeapon::eWeaponAddonScope, bScope);
+							W->m_cur_scope = cur_scope;
 						}
+						if (W->m_silencer_status == ALife::eAddonAttachable)
+							W->m_addon_flags.set(CSE_ALifeItemWeapon::eWeaponAddonSilencer, bSilencer);
+						if (W->m_grenade_launcher_status == ALife::eAddonAttachable)
+							W->m_addon_flags.set(CSE_ALifeItemWeapon::eWeaponAddonGrenadeLauncher, bLauncher);
+					}
+					CSE_ALifeInventoryItem* IItem = smart_cast<CSE_ALifeInventoryItem*>(E);
+					if (IItem)
+					{
+						f_cond = Random.randF(0.0f, 0.6f);
+						IItem->m_fCondition = f_cond;
 					}
 				}
 			}
