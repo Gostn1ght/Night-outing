@@ -372,7 +372,7 @@ bool CUIMainIngameWnd::OnKeyboardAction(int dik, EUIMessages keyboard_action)
 			return true;
 		}
 	}
-	return inherited::OnKeyboardAction(dik, keyboard_action);
+	return CUIWindow::OnKeyboardAction(dik, keyboard_action);
 }
 
 void CUIMainIngameWnd::ToggleAdminSpawner(bool bShow)

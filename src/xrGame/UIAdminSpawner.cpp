@@ -6,6 +6,7 @@
 #include "ui/UI3tButton.h"
 #include "ui/UIListBox.h"
 #include "ui/UIListBoxItem.h"
+#include "ui/UIComboBox.h"
 #include "ui/UITabControl.h"
 #include "ui/UIScrollView.h"
 #include "ui/UIEditBox.h"
@@ -495,14 +496,14 @@ bool CUIAdminSpawner::OnMouseAction(float x, float y, EUIMessages mouse_action)
 			{
 				m_bResizing = true;
 				m_vResizeStartPos.set(x, y);
-				GetWndSize(m_vWindowStartSize);
+				m_vWindowStartSize = GetWndSize();
 				return true;
 			}
 
 			// If not resizing, then check for dragging
 			m_bDragging = true;
 			m_vDragStartPos.set(x, y);
-			GetWndPos(m_vWindowStartPos);
+			m_vWindowStartPos = GetWndPos();
 			return true;
 		}
 	case WINDOW_LBUTTON_UP:
@@ -518,8 +519,7 @@ bool CUIAdminSpawner::OnMouseAction(float x, float y, EUIMessages mouse_action)
 
 bool CUIAdminSpawner::OnMouseMove(float x, float y)
 {
-	if (inherited::OnMouseMove(x, y))
-		return true;
+	inherited::OnMouseMove();
 
 	if (m_bDragging)
 	{

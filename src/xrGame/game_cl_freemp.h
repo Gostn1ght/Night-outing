@@ -45,8 +45,45 @@ public:
 
 	void SendHelloMsg();
 
+	// --- MP feature client handlers (a-life sync / PDA / squads) ---
+	// Client-side mirror of an a-life object streamed from the server.
+	struct MPClientAlifeObj
+	{
+		u16			id = 0;
+		shared_str	name;
+		Fvector		pos = { 0, 0, 0 };
+	};
+
+	// Client-side mirror of the player's MP squad.
+	struct MPClientSquad
+	{
+		ClientID		leader;
+		u16				id = 0;
+		u16				map_point = 0;
+		shared_str		quest;
+		xr_vector<u16>	members;
+	};
+
 private:
 	void OnVoiceMessage(NET_Packet* P);
+
+	// Handlers for the freemp game-message events (see TranslateGameMessage).
+	void OnPlayerTeleport(NET_Packet& P);
+	void OnAlifeObjectSpawn(NET_Packet& P);
+	void OnAlifeObjectUpdate(NET_Packet& P);
+	void OnPdaChatMessage(NET_Packet& P);
+	void OnPdaContactMessage(NET_Packet& P);
+	void OnSquadNotify(NET_Packet& P);
+	void OnSquadRespondInvite(NET_Packet& P);
+
+	// Show a short PDA news/notification message using the existing UI.
+	void ShowPdaNotification(LPCSTR caption, LPCSTR text, LPCSTR icon);
+
 	bool adm_wallhack = false;
+
+	// Client-side mirror state populated from server events.
+	xr_map<u16, MPClientAlifeObj>	m_client_alife_objects;
+	xr_vector<u32>					m_pda_contacts;
+	MPClientSquad					m_client_squad;
 };
 

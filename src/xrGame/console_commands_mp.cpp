@@ -498,7 +498,7 @@ static xrClientData* exclude_command_initiator(LPCSTR args)
 	}
 	return NULL;
 };
-static char const * exclude_raid_from_args(LPCSTR args, LPSTR dest, size_t dest_size)
+char const * exclude_raid_from_args(LPCSTR args, LPSTR dest, size_t dest_size)
 {
 	strncpy_s(dest, dest_size, args, dest_size - 1);
 	char* tmp_str = strrchr(dest, ' ');

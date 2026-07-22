@@ -218,9 +218,9 @@ void game_sv_freemp::delete_player_from_squad(NET_Packet& P, u16 id)
 
 	NET_Packet P_;
 	GenerateGameMessage(P_);
-	P_.w_u16(GE_PDA_SQUAD_KICK_PLAYER);
+	P_.w_u32(GE_PDA_SQUAD_KICK_PLAYER); // client reads the event id as u32
 	string32 msg;
-	xr_sprintf(msg, CStringTable().translate("mp_squad_kick").c_str()); //   
+	xr_sprintf(msg, CStringTable().translate("mp_squad_kick").c_str()); //
 	P_.w_stringZ(msg);
 	m_server->SendTo(WhoKicked->owner->ID, P_, net_flags(TRUE, TRUE));
 

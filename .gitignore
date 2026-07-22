@@ -6,7 +6,10 @@
 /binares
 /intermediate
 
- 
+# MSBuild logs
+build_*.txt
+
+
 # User-specific files
 *.rsuser
 *.suo

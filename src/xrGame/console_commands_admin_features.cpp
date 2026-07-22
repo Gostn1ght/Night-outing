@@ -857,12 +857,14 @@ public:
 extern BOOL		g_cl_draw_mp_statistic;
 extern int		MAX_DISTANCE_FIND_GRAPH;
 
-extern float	Shedule_Scale_Objects;
-extern float	Shedule_Scale_AI_Stalker;
-extern float	Shedule_Scale_Items;
+// These admin-tunable scheduler/HUD scales are owned here (registered by the
+// admin console commands below). Defaults match a neutral 1.0 scale / effects on.
+float	Shedule_Scale_Objects		= 1.0f;
+float	Shedule_Scale_AI_Stalker	= 1.0f;
+float	Shedule_Scale_Items			= 1.0f;
 
 extern int		SyncAlifeCount;
-extern int		HudWeaponsEffects;
+int		HudWeaponsEffects			= 1;
 
 void register_console_admin()
 {

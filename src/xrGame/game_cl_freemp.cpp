@@ -84,7 +84,7 @@ void game_cl_freemp::shedule_Update(u32 dt)
 		m_pVoiceChat->Update();
 	}
 
-	// синхронизация имени и денег игроков для InventoryOwner
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ InventoryOwner
 	for (auto cl : players)
 	{
 		game_PlayerState* ps = cl.second;
@@ -288,7 +288,7 @@ void game_cl_freemp::OnChatMessage(NET_Packet* P)
 
 	LPCSTR Nameofplayer = PlayerName.c_str();
 	LPCSTR Message = ChatMsg.c_str();
-	LPCSTR Anonim = "Единая Сталкерская Сеть";
+	LPCSTR Anonim = "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ";
 	LPCSTR lastName = local_player->getName();
 	GAME_NEWS_DATA				news_data;
 
@@ -303,7 +303,7 @@ void game_cl_freemp::OnChatMessage(NET_Packet* P)
 
 		shared_str PlayerTex = "ui_inGame2_Hero";
 
-		if (xr_strcmp(Nameofplayer, "АлистарФокс") == 0)
+		if (xr_strcmp(Nameofplayer, "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ") == 0)
 			PlayerTex = "ui_inGame2_player_alistarfox";
 
 		else if (xr_strcmp(Nameofplayer, "lintelli") == 0)
@@ -350,7 +350,7 @@ void game_cl_freemp::OnChatMessage(NET_Packet* P)
 	else if (team == 160 && lastName == PrivatedName)
 	{
 		string256 str;
-		sprintf(str, "Принято [%s -> %s (private)]", Nameofplayer, lastName);
+		sprintf(str, "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ [%s -> %s (private)]", Nameofplayer, lastName);
 			news_data.m_type = (GAME_NEWS_DATA::eNewsType)0;
 			news_data.news_caption = str;
 			news_data.news_text = Message;
@@ -491,24 +491,251 @@ void game_cl_freemp::TranslateGameMessage(u32 msg, NET_Packet& P)
 		adm_wallhack ? adm_wallhack = false : adm_wallhack = true;
 	}break;
 
+	case GAME_EVENT_PLAYER_TELEPORT:
+	{
+		OnPlayerTeleport(P);
+	}break;
+
+	case GAME_EVENT_OBJECTS_SPAWN:
+	{
+		OnAlifeObjectSpawn(P);
+	}break;
+
+	case GAME_EVENT_OBJECTS_UPDATE:
+	{
+		OnAlifeObjectUpdate(P);
+	}break;
+
+	case GAME_EVENT_PDA_CHAT:
+	{
+		OnPdaChatMessage(P);
+	}break;
+
+	case GAME_EVENT_UI_PDA:
+	{
+		OnPdaContactMessage(P);
+	}break;
+
+	case GE_PDA_SQUAD_KICK_PLAYER:
+	case GE_PDA_SQUAD_MAKE_LEADER:
+	{
+		OnSquadNotify(P);
+	}break;
+
+	case GE_PDA_SQUAD_RESPOND_INVITE:
+	{
+		OnSquadRespondInvite(P);
+	}break;
+
 	default:
 		inherited::TranslateGameMessage(msg, P);
 	}
 }
 
+// -----------------------------------------------------------------------------
+// MP feature client handlers. Each reads the packet exactly as written by the
+// matching game_sv_freemp*.cpp sender. Every event the server can send must be
+// consumed here: the base game_cl_GameState::TranslateGameMessage() fatally
+// asserts ("Unknown Game Message") on any message it does not recognise.
+// -----------------------------------------------------------------------------
+
+void game_cl_freemp::ShowPdaNotification(LPCSTR caption, LPCSTR text, LPCSTR icon)
+{
+	if (g_dedicated_server || !CurrentGameUI())
+		return;
+
+	GAME_NEWS_DATA data;
+	data.m_type = data.eNews;
+	data.news_caption = caption ? caption : "";
+	data.news_text = text ? text : "";
+	data.texture_name = icon ? icon : "";
+	data.receive_time = Level().GetGameTime();
+
+	if (CurrentGameUI()->UIMainIngameWnd && CurrentGameUI()->m_pMessagesWnd)
+		CurrentGameUI()->m_pMessagesWnd->AddIconedPdaMessage(&data);
+}
+
+// game_sv_freemp::TeleportPlayerTo -> w_clientID, w_vec3(pos), w_vec3(angle)
+void game_cl_freemp::OnPlayerTeleport(NET_Packet& P)
+{
+	ClientID	cid;
+	Fvector		pos, angle;
+	P.r_clientID(cid);
+	P.r_vec3(pos);
+	P.r_vec3(angle);
+
+	CActor* pActor = smart_cast<CActor*>(Level().CurrentEntity());
+	if (pActor && pActor->g_Alive())
+		pActor->MoveActor(pos, angle);
+}
+
+// game_sv_freemp::WriteAlifeObjectsToClient -> w_u8(last), w_stringZ(name),
+// Spawn_WriteNoBeginPacket, UPDATE_Write. We only mirror {id,name}; the trailing
+// spawn/update blob is left unread (the packet is discrete, so this is safe).
+void game_cl_freemp::OnAlifeObjectSpawn(NET_Packet& P)
+{
+	u8 is_last = 0;
+	P.r_u8(is_last);
+
+	shared_str name;
+	P.r_stringZ(name);
+
+	MPClientAlifeObj obj;
+	obj.name = name;
+	m_client_alife_objects[obj.id] = obj;
+}
+
+// game_sv_freemp a-life updates -> w_u8(mode) then mode-specific fields.
+void game_cl_freemp::OnAlifeObjectUpdate(NET_Packet& P)
+{
+	u8 mode = 0;
+	P.r_u8(mode);
+
+	switch (mode)
+	{
+	case 1: // register/add: u16 id, stringZ name, [spawn+update blob]
+	{
+		u16 id = 0;		P.r_u16(id);
+		shared_str name;	P.r_stringZ(name);
+		MPClientAlifeObj obj;
+		obj.id = id;
+		obj.name = name;
+		m_client_alife_objects[id] = obj;
+	}break;
+	case 2: // unregister/remove: u16 id
+	{
+		u16 id = 0;		P.r_u16(id);
+		m_client_alife_objects.erase(id);
+	}break;
+	case 3: // update: u16 id, stringZ name, [update blob]
+	{
+		u16 id = 0;		P.r_u16(id);
+		shared_str name;	P.r_stringZ(name);
+		MPClientAlifeObj& obj = m_client_alife_objects[id];
+		obj.id = id;
+		obj.name = name;
+	}break;
+	case 4: // position update: u16 id, vec3 pos, u16 graph, u16 node
+	{
+		u16 id = 0;		P.r_u16(id);
+		Fvector pos;		P.r_vec3(pos);
+		u16 graph = 0;	P.r_u16(graph);
+		u16 node = 0;		P.r_u16(node);
+		MPClientAlifeObj& obj = m_client_alife_objects[id];
+		obj.id = id;
+		obj.pos = pos;
+	}break;
+	default:
+		break;
+	}
+}
+
+// game_sv_freemp::RecivePdaChatMSG rebroadcast -> w_u8(global) then strings.
+void game_cl_freemp::OnPdaChatMessage(NET_Packet& P)
+{
+	u8 global = 0;
+	P.r_u8(global);
+
+	shared_str caption, text, icon;
+
+	if (global == 1)
+	{
+		P.r_stringZ(caption);
+		P.r_stringZ(text);
+		P.r_stringZ(icon);
+	}
+	else
+	{
+		ClientID second_id, game_id;
+		P.r_clientID(second_id);
+		P.r_clientID(game_id);
+		P.r_stringZ(caption);
+		P.r_stringZ(text);
+		P.r_stringZ(icon);
+	}
+
+	ShowPdaNotification(caption.c_str(), text.c_str(), icon.c_str());
+}
+
+// game_sv_freemp::RecivePdaContactMSG -> w_u8(type) then u32(id) for 2/3.
+void game_cl_freemp::OnPdaContactMessage(NET_Packet& P)
+{
+	u8 type = 0;
+	P.r_u8(type);
+
+	switch (type)
+	{
+	case 2: // add contact
+	{
+		u32 id = 0;	P.r_u32(id);
+		if (std::find(m_pda_contacts.begin(), m_pda_contacts.end(), id) == m_pda_contacts.end())
+			m_pda_contacts.push_back(id);
+	}break;
+	case 3: // remove contact
+	{
+		u32 id = 0;	P.r_u32(id);
+		auto it = std::find(m_pda_contacts.begin(), m_pda_contacts.end(), id);
+		if (it != m_pda_contacts.end())
+			m_pda_contacts.erase(it);
+	}break;
+	case 4: // team destroyed
+	{
+		m_pda_contacts.clear();
+	}break;
+	default:
+		break;
+	}
+}
+
+// GE_PDA_SQUAD_KICK_PLAYER / GE_PDA_SQUAD_MAKE_LEADER -> w_stringZ(msg)
+void game_cl_freemp::OnSquadNotify(NET_Packet& P)
+{
+	shared_str msg;
+	P.r_stringZ(msg);
+	ShowPdaNotification(CStringTable().translate("mp_squad").c_str(), msg.c_str(), "");
+}
+
+// game_sv_freemp::SendMpSuqadToMembers -> w_clientID(leader), w_u16(id),
+// w_u16(map_point), w_stringZ(quest), w_u8(capacity), w_stringZ(msg),
+// then capacity * w_u16(member GameID).
+void game_cl_freemp::OnSquadRespondInvite(NET_Packet& P)
+{
+	m_client_squad.members.clear();
+
+	P.r_clientID(m_client_squad.leader);
+	P.r_u16(m_client_squad.id);
+	P.r_u16(m_client_squad.map_point);
+	P.r_stringZ(m_client_squad.quest);
+
+	u8 capacity = 0;
+	P.r_u8(capacity);
+
+	shared_str msg;
+	P.r_stringZ(msg);
+
+	for (u8 i = 0; i < capacity; ++i)
+	{
+		u16 member_id = 0;
+		P.r_u16(member_id);
+		m_client_squad.members.push_back(member_id);
+	}
+
+	ShowPdaNotification(CStringTable().translate("mp_squad").c_str(), msg.c_str(), "");
+}
+
 /*
 void game_cl_freemp::SendHelloMsg()
 {
-	LPCSTR Message = "Единая Сталкерская Сеть.";
+	LPCSTR Message = "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ.";
 	for (auto cl : players)
 	{
 		game_PlayerState* ps = cl.second;
 		if (!ps || ps->testFlag(GAME_PLAYER_FLAG_VERY_VERY_DEAD)) continue;
 		CActor* pActor = smart_cast<CActor*>(Level().Objects.net_Find(ps->GameID));
 		if (!pActor || !pActor->g_Alive()) continue;
-		Message = "%p, Единая Сталкерская Сеть.", pActor->Name();
+		Message = "%p, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ.", pActor->Name();
 	}
-	LPCSTR Nameofplayer = "Единая Сталкерская Сеть";
+	LPCSTR Nameofplayer = "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ";
 	GAME_NEWS_DATA				news_data;
 	shared_str PlayerTex = "ui_inGame2_Radiopomehi";
 	news_data.m_type = (GAME_NEWS_DATA::eNewsType)0;
