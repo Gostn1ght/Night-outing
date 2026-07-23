@@ -17,7 +17,7 @@
 	#define	GAMESPY_GAMENAME				"stalkercoppc"
 	#define GAMESPY_GAMEID					2760
 	#define GAMESPY_PRODUCTID				11994
-	#define GAME_VERSION					"NearestStage x64: DEV-Test                                                                                                               Client version 3.0"
+	#define GAME_VERSION					"Lost Zone x64: DEV-Test                                                                                                               Client version 3.0"
 	#define REGISTRY_PATH					"Software\\GSC Game World\\STALKER-COP\\"
 #endif
 

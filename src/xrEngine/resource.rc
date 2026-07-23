@@ -59,13 +59,13 @@ BEGIN
     BEGIN
         BLOCK "000004b0"
         BEGIN
-            VALUE "CompanyName", "NearestStage Team"
-            VALUE "FileDescription", "NearestStage:Extended"
+            VALUE "CompanyName", "Lost Zone Team"
+            VALUE "FileDescription", "Lost Zone: Extended"
             VALUE "FileVersion", "NS"
             VALUE "InternalName", "xrEngine"
             VALUE "LegalCopyright", "Copyright © 2009 GSC Game World"
             VALUE "OriginalFilename", "xrEngine.exe"
-            VALUE "ProductName", "NearestStage:Extended"
+            VALUE "ProductName", "Lost Zone: Extended"
             VALUE "ProductVersion", "NS"
         END
     END

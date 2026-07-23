@@ -49,7 +49,7 @@ void ShowMain()
 	if (wnd.Collapsed)
 		return;
 
-	ImGui::Text(u8"Nearest Stage");
+	ImGui::Text(u8"Lost Zone");
 	if (ImGui::Button("Test Window"))
 		show_test_window ^= 1;
 /*	if (ImGui::Button("Test Node Editor"))

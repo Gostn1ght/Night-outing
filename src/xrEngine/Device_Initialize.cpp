@@ -68,7 +68,7 @@ PROTECT_API void CRenderDevice::Initialize			()
 
         // Create the render window
 		m_hWnd = CreateWindowEx( WS_EX_TOPMOST, 
-								wndclass, "Nearest Stage x64 DEV-Test", m_dwWindowStyle,
+								wndclass, "Lost Zone x64 DEV-Test", m_dwWindowStyle,
                                /*rc.left, rc.top, */CW_USEDEFAULT, CW_USEDEFAULT,
                                (rc.right-rc.left), (rc.bottom-rc.top), 0L,
                                0, hInstance, 0L );

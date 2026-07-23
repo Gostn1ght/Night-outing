@@ -217,9 +217,9 @@ void CreateLog			(BOOL nl)
         	abort();
         }
 
-		Msg("NearestStage");
-		Msg("NearestStage Discord: https://discord.gg/YGUxMg3f");
-		Msg("NearestStage VK: https://vk.com/neareststage ");
+		Msg("Lost Zone");
+		Msg("Lost Zone Discord: https://discord.gg/aZ92NVtKgE");
+		Msg("Lost Zone VK: https://vk.ru/lost_zone_mp ");
 
 		for (auto msg : *LogFile)
 		{

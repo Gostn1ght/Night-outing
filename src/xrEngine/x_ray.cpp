@@ -253,7 +253,7 @@ PROTECT_API void InitSettings	()
 	path_excluder_predicate			tmp_excluder(&tmp_ignore_pathes);
 	CInifile::allow_include_func_t	tmp_functor;
 
-	InitConfig(pNearestSettings, "NearestStage.ltx");
+	InitConfig(pNearestSettings, "LostZone.ltx");
 
 	tmp_functor.bind(&tmp_excluder, &path_excluder_predicate::is_allow_include);
 	pSettingsAuth					= xr_new<CInifile>(

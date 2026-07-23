@@ -388,7 +388,7 @@ void CStats::Show()
 		pFont->SizeOf_(0.2f);
 		F.SetColor(hex_color(208, 208, 208));
 		F.OutSet(5, 5);
-	//	F.OutNext("NearestStage DEV-TEST");
+	//	F.OutNext("Lost Zone DEV-TEST");
 		pFont->OnRender();
 	}
 #ifdef DEBUG
@@ -560,7 +560,7 @@ void CStats::OnRender				()
 		pSFont->SizeOf_(1.5f);
 		F.SetColor(hex_color(208, 208, 208));
 		F.OutSet(5, 5);
-		F.OutNext("NearestStage DEV-TEST  Client Version 3.3");
+		F.OutNext("Lost Zone DEV-TEST  Client Version 3.3");
 		pSFont->OnRender();
 	}
 #endif // !DEDICATED_SERVER
